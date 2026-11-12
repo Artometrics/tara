@@ -1,0 +1,33 @@
+---
+import { images, type ImageKey } from "../data/images";
+
+interface Props {
+  name: ImageKey;
+  sizes: string;
+  eager?: boolean;
+  alt?: string;
+  position?: string;
+  class?: string;
+}
+
+const { name, sizes, eager = false, alt, position, class: className } = Astro.props;
+const image = images[name];
+const webpSet = `${image.base}-${image.small}.webp ${image.small}w, ${image.base}.webp ${image.width}w`;
+const jpgSet = `${image.base}-${image.small}.jpg ${image.small}w, ${image.base}.jpg ${image.width}w`;
+---
+
+<picture class={className}>
+  <source type="image/webp" srcset={webpSet} sizes={sizes} />
+  <img
+    src={`${image.base}.jpg`}
+    srcset={jpgSet}
+    sizes={sizes}
+    width={image.width}
+    height={image.height}
+    alt={alt ?? image.alt}
+    loading={eager ? "eager" : "lazy"}
+    decoding="async"
+    fetchpriority={eager ? "high" : "auto"}
+    style={position ? `object-position:${position}` : undefined}
+  />
+</picture>

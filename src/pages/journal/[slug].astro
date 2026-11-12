@@ -1,35 +1,64 @@
 ---
 import Base from "../../components/Base.astro";
-import { articles, type Article } from "../../data/catalog";
+import Ornament from "../../components/Ornament.astro";
+import Plate from "../../components/Plate.astro";
+import { draftNotice, posts, readingMinutes, type Post } from "../../data/journal";
 
 export function getStaticPaths() {
-  return articles.map((article) => ({
-    params: { slug: article.slug },
-    props: { article },
-  }));
+  return posts.map((post) => ({ params: { slug: post.slug }, props: { post } }));
 }
 
 interface Props {
-  article: Article;
+  post: Post;
 }
 
-const { article } = Astro.props;
+const { post } = Astro.props;
+const index = posts.findIndex((item) => item.slug === post.slug);
+const prev = posts[(index - 1 + posts.length) % posts.length];
+const next = posts[(index + 1) % posts.length];
+const palettes = {
+  india: ["marigold", "blush"],
+  italy: ["terracotta", "ivory"],
+  america: ["blush", "ivory"],
+} as const;
+const palette = post.celebration ? [...palettes[post.celebration]] : (["blush", "marigold"] as const);
 ---
 
-<Base title={article.title} description={article.dek}>
+<Base title={post.title} description={post.dek}>
   <header class="page-head">
-    <p class="quiet"><a href="/journal">Journal</a> · {article.dateLabel}</p>
-    <h1 class="script">{article.title}</h1>
-    <p class="lede">{article.dek}</p>
+    <p class="kicker dark"><a href="/journal">Journal</a> · {post.category} · Starter draft · {readingMinutes(post)} min read</p>
+    <h1 class="script article-title">{post.title}</h1>
+    <Ornament />
+    <p class="lede">{post.dek}</p>
   </header>
-  {
-    article.image ? (
-      <figure class="article-figure frame">
-        <img src={article.image} alt={article.imageAlt ?? ""} />
-      </figure>
-    ) : null
-  }
+  <figure class="article-figure frame">
+    <Plate motif={post.motif} palette={[...palette]} ratio="16/9" label="Cover slot" />
+  </figure>
   <div class="prose">
-    {article.paragraphs.map((paragraph) => <p>{paragraph}</p>)}
+    <p class="draft-note">{draftNotice}</p>
+    <p class="lead-in">{post.intro}</p>
+    {
+      post.sections.map((section) => (
+        <section>
+          <h2>{section.heading}</h2>
+          {section.body.map((paragraph) => <p>{paragraph}</p>)}
+        </section>
+      ))
+    }
+    {
+      post.checklist ? (
+        <aside class="checklist" aria-label={post.checklist.title}>
+          <h2>{post.checklist.title}</h2>
+          <ul>
+            {post.checklist.items.map((item) => <li>{item}</li>)}
+          </ul>
+        </aside>
+      ) : null
+    }
+    <p class="todo">{post.placeholder}</p>
+    <p class="pager">
+      <a href={`/journal/${prev.slug}`} rel="prev">← {prev.title}</a>
+      <a href={`/journal/${next.slug}`} rel="next">{next.title} →</a>
+    </p>
   </div>
 </Base>

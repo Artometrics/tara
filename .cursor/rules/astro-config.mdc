@@ -1,0 +1,10 @@
+---
+description: Astro config for the static Tara preview.
+globs:
+  - astro.config.mjs
+---
+
+# Astro config
+
+- Static output only. No server adapter, no remote form endpoint.
+- Do not add a sitemap that invites indexing.

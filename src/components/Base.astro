@@ -5,20 +5,22 @@ import "@fontsource/cormorant-garamond/500.css";
 import "@fontsource/cormorant-garamond/600.css";
 import "@fontsource/cormorant-garamond/400-italic.css";
 import "@fontsource/italianno/400.css";
+import "@fontsource/jost/400.css";
+import "@fontsource/jost/500.css";
 import Header from "./Header.astro";
 import Footer from "./Footer.astro";
 import Drawers from "./Drawers.astro";
+import { site } from "../data/site";
 
 interface Props {
   title: string;
   description?: string;
+  signup?: boolean;
 }
 
-const {
-  title,
-  description = "Prism & Pollen is a local preview. Nothing here is for sale.",
-} = Astro.props;
-const fullTitle = title === "Prism & Pollen" ? title : `${title} · Prism & Pollen`;
+const { title, description = site.description, signup = true } = Astro.props;
+const fullTitle = title === site.name ? site.fullTitle : `${title} · ${site.name}`;
+const current = Astro.url.pathname.replace(/\/$/, "");
 ---
 
 <!doctype html>
@@ -28,19 +30,20 @@ const fullTitle = title === "Prism & Pollen" ? title : `${title} · Prism & Poll
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="robots" content="noindex, nofollow, noarchive" />
     <meta name="googlebot" content="noindex, nofollow" />
+    <meta name="theme-color" content="#FBF5EA" />
     <title>{fullTitle}</title>
     <meta name="description" content={description} />
-    <link rel="icon" href="/favicon.svg" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
   </head>
   <body>
-    <Header />
+    <Header current={current} />
     <Drawers />
     <main id="content">
       <slot />
     </main>
-    <Footer />
+    <Footer signup={signup} />
     <script>
-      import "../scripts/storefront";
+      import "../scripts/site";
     </script>
   </body>
 </html>

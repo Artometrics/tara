@@ -1,4 +1,4 @@
-# Isolated static config for this prototype only. It was not deployed.
+# Static build of the Astro site. This file does not deploy anything by itself.
 [build]
   command = "npm run build"
   publish = "dist"
@@ -13,3 +13,8 @@
     X-Content-Type-Options = "nosniff"
     Referrer-Policy = "no-referrer"
     X-Frame-Options = "SAMEORIGIN"
+
+[[headers]]
+  for = "/_astro/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"

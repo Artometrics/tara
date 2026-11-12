@@ -1,0 +1,59 @@
+---
+import Base from "../components/Base.astro";
+import Ornament from "../components/Ornament.astro";
+import { site } from "../data/site";
+---
+
+<Base title="Newsletter" description="A draft newsletter signup. Nothing is sent anywhere." signup={false}>
+  <header class="page-head">
+    <p class="kicker dark">Draft</p>
+    <h1 class="script">Newsletter</h1>
+    <Ornament />
+    <p class="lede">
+      This signup is a front-end draft. Your email is saved in this browser only and is not sent anywhere. To actually reach
+      Tara, use the email draft link under the form.
+    </p>
+  </header>
+
+  <section class="signup-page" aria-labelledby="signup-title">
+    <h2 class="sr-only" id="signup-title">Sign up</h2>
+    <form class="signup stacked-form" data-newsletter-form data-mailto={site.contactEmail} novalidate>
+      <label class="field">
+        <span>Name (optional)</span>
+        <input type="text" name="name" autocomplete="given-name" />
+      </label>
+      <label class="field">
+        <span>Email</span>
+        <input type="email" name="email" autocomplete="email" required />
+      </label>
+      <button class="orn-btn" type="submit">
+        <i class="gem a"></i><i class="gem b"></i><i class="gem c"></i><i class="gem d"></i>
+        Save my spot (draft)
+      </button>
+      <p class="form-status" data-newsletter-status role="status" aria-live="polite"></p>
+      <p class="mail-line" data-newsletter-mail>
+        <a class="text-link" data-newsletter-mail-link href={`mailto:${site.contactEmail}?subject=Newsletter%20draft%20signup`}>Open an email draft instead</a>
+        <span class="quiet">Opens your email app. The address is a placeholder.</span>
+      </p>
+    </form>
+    <div class="saved" data-saved-panel hidden>
+      <h2>Saved on this device</h2>
+      <p class="quiet"><span data-saved-count>0</span> saved in this browser. Nothing has been sent.</p>
+      <button class="linkish" type="button" data-clear-signups>Clear saved signups</button>
+    </div>
+  </section>
+
+  <section class="band" id="plans">
+    <div class="band-inner">
+      <h2 class="script">What it might include</h2>
+      <Ornament />
+      <ul class="principles">
+        <li>New journal drafts, once Tara has edited them</li>
+        <li>Lookbook additions with the questions behind each look</li>
+        <li>Budget diary updates, with real numbers only when they are real</li>
+        <li>Behind-the-scenes notes from fittings and venue calls</li>
+      </ul>
+      <p class="quiet center">All of this is draft wording. Nothing is promised until a real list exists.</p>
+    </div>
+  </section>
+</Base>

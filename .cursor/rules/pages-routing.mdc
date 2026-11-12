@@ -1,5 +1,5 @@
 ---
-description: File-based routes for the Prism & Pollen preview.
+description: File-based routes for the Tara preview.
 globs:
   - src/pages/**
 ---
@@ -7,5 +7,5 @@ globs:
 # Pages
 
 - Shell is `src/components/Base.astro`.
-- Representative families: `/`, `/collections/[handle]`, `/products/[handle]`, `/search`, `/cart`, `/journal`, `/journal/[slug]`, `/pages/[slug]`, `/pages/shops`, `/pages/shops/[slug]`, `404`.
-- Do not add a remote form action or a checkout endpoint.
+- Routes: `/`, `/about`, `/weddings`, `/lookbook`, `/lookbook/[slug]`, `/journal`, `/journal/[slug]`, `/partner`, `/newsletter`, `404`.
+- New pages need an entry in the header menus or footer, and a screenshot refresh (`npm run screenshots`).

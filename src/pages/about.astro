@@ -1,0 +1,81 @@
+---
+import Base from "../components/Base.astro";
+import Ornament from "../components/Ornament.astro";
+import Picture from "../components/Picture.astro";
+---
+
+<Base title="About Tara" description="Who Tara is, what she is planning and what is still to be filled in.">
+  <header class="page-head">
+    <p class="kicker dark">About</p>
+    <h1 class="script">About Tara</h1>
+    <Ornament />
+  </header>
+
+  <section class="split" id="creator">
+    <figure class="split-photo">
+      <Picture name="creator-flatlay" sizes="(min-width: 900px) 40vw, 100vw" />
+      <figcaption class="quiet">AI-generated illustration of a creator's desk. Not a photograph of Tara.</figcaption>
+    </figure>
+    <div class="split-copy prose-left">
+      <h2 class="script">A bride with a plan</h2>
+      <p>
+        Tara is planning to marry in about two years, and she is planning three celebrations: one in India, one in Italy
+        and one in America. She is multi-ethnic, of Indian descent.
+      </p>
+      <p>
+        By day she works in business and care coordination, which means a lot of juggling people, schedules and
+        information. Wedding planning asks for the same muscles, so the plan is to document it with the same care.
+      </p>
+      <p>
+        The goal of this site is to grow into a bridal creator project: honest notes, outfit hunts and budget diaries,
+        and, over time, partnerships that help pay for the dress and the planning. Everything will be labeled as it
+        becomes real.
+      </p>
+      <p class="todo">[Tara: add a short personal note here, in your own words. Hometown, family, how you met your partner and anything else you want to share.]</p>
+      <p><a class="orn-btn" href="/weddings">
+        <i class="gem a"></i><i class="gem b"></i><i class="gem c"></i><i class="gem d"></i>
+        The three weddings
+      </a></p>
+    </div>
+  </section>
+
+  <section class="band" id="facts">
+    <div class="band-inner">
+      <h2 class="script">Facts, and what is still blank</h2>
+      <Ornament />
+      <div class="fact-grid">
+        <div>
+          <h3>Known so far</h3>
+          <ul>
+            <li>Name: Tara</li>
+            <li>Planning to marry in about two years</li>
+            <li>Works in business and care coordination</li>
+            <li>Multi-ethnic, of Indian descent</li>
+            <li>Planning three celebrations: India, Italy and America</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Tara to fill in</h3>
+          <ul>
+            <li>Last name or public name, if different</li>
+            <li>Location and hometown</li>
+            <li>Partner's name and how much to share about them</li>
+            <li>Dates, venues and guest counts</li>
+            <li>Social handles and a real contact address</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section prose-block" id="disclosures">
+    <h2 class="script">What this preview is</h2>
+    <Ornament />
+    <p>
+      This is a draft preview. It is not indexed by search engines. Every image on it is an AI-generated illustration, not a
+      photograph of Tara, her family or any real venue. There are no accounts, no payments, no tracking and no products for
+      sale. The "partnership" packages are examples only. When real sponsorships or affiliate links exist, they will be
+      labeled where they appear.
+    </p>
+  </section>
+</Base>
