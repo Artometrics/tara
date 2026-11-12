@@ -1,0 +1,103 @@
+---
+import Base from "../components/Base.astro";
+import Ornament from "../components/Ornament.astro";
+import { audiencePillars, draftPrinciples, exampleTiers, mediaKit, pitchBody, pitchSubject } from "../data/partner";
+import { site } from "../data/site";
+
+const mailto = `mailto:${site.contactEmail}?subject=${encodeURIComponent(pitchSubject)}&body=${encodeURIComponent(pitchBody)}`;
+---
+
+<Base title="Partner With Me" description="A draft media kit, audience pillars and clearly labeled example packages for brands and vendors.">
+  <header class="page-head">
+    <p class="kicker dark">Draft media kit</p>
+    <h1 class="script">Partner With Me</h1>
+    <Ornament />
+    <p class="lede">
+      Tara is at the very start of building an audience. This page shows how a collaboration could work. It is a draft:
+      every figure is blank until it is real, and every package is an example.
+    </p>
+  </header>
+
+  <section class="section prose-block" id="media-kit">
+    <h2 class="script">Media kit</h2>
+    <Ornament />
+    <div class="table-wrap" role="region" aria-label="Media kit" tabindex="0">
+      <table class="compare kit">
+        <tbody>
+          {
+            mediaKit.map((row) => (
+              <tr>
+                <th scope="row">{row.label}</th>
+                <td>{row.value}</td>
+              </tr>
+            ))
+          }
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="band" id="audience">
+    <div class="band-inner">
+      <h2 class="script">Audience pillars</h2>
+      <Ornament />
+      <p class="lede center">Who the content is for. These are intentions, not measured demographics.</p>
+      <div class="pillar-grid">
+        {
+          audiencePillars.map((pillar) => (
+            <article class="pillar">
+              <h3>{pillar.title}</h3>
+              <p>{pillar.body}</p>
+            </article>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="packages">
+    <h2 class="script">Example packages</h2>
+    <Ornament />
+    <p class="lede">
+      <strong class="flag">Examples only.</strong> These are not offers, no prices are set, and nothing can be booked here.
+      They exist to show the shape of a collaboration.
+    </p>
+  </section>
+  <div class="tier-grid">
+    {
+      exampleTiers.map((tier) => (
+        <article class="tier">
+          <p class="flag-tag">Example, not an offer</p>
+          <h3>{tier.name}</h3>
+          <p class="quiet">{tier.tagline}</p>
+          <ul>
+            {tier.includes.map((item) => <li>{item}</li>)}
+          </ul>
+          <p class="rate">{tier.rate}</p>
+        </article>
+      ))
+    }
+  </div>
+
+  <section class="band" id="principles">
+    <div class="band-inner">
+      <h2 class="script">Draft principles</h2>
+      <Ornament />
+      <ul class="principles">
+        {draftPrinciples.map((item) => <li>{item}</li>)}
+      </ul>
+      <p class="quiet center">Tara will confirm or change these before anything goes public.</p>
+    </div>
+  </section>
+
+  <section class="section prose-block" id="pitch">
+    <h2 class="script">Pitch email template</h2>
+    <Ornament />
+    <p class="lede">A starting point for a first message. The address is a placeholder: {site.contactNote}</p>
+    <pre class="pitch" tabindex="0">{`Subject: ${pitchSubject}\n\n${pitchBody}`}</pre>
+    <p><a class="orn-btn" href={mailto}>
+      <i class="gem a"></i><i class="gem b"></i><i class="gem c"></i><i class="gem d"></i>
+      Open as an email draft
+    </a></p>
+  </section>
+</Base>

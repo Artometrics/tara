@@ -1,0 +1,97 @@
+---
+import Base from "../components/Base.astro";
+import Ornament from "../components/Ornament.astro";
+import Picture from "../components/Picture.astro";
+import { celebrations } from "../data/site";
+import { looks } from "../data/looks";
+---
+
+<Base title="The Three Weddings" description="India, Italy and America: the three celebrations Tara is planning, with details still to come.">
+  <header class="page-head">
+    <p class="kicker dark">India · Italy · America</p>
+    <h1 class="script">The Three Weddings</h1>
+    <Ornament />
+    <p class="lede">
+      Three celebrations, three moods and one bride. No dates, places or guest counts are published yet, so each section
+      marks what is still to be decided.
+    </p>
+  </header>
+
+  {
+    celebrations.map((item, index) => {
+      const related = looks.filter((look) => look.celebration === item.id);
+      return (
+        <section class:list={["wedding", { flip: index % 2 === 1 }]} id={item.id} aria-labelledby={`${item.id}-title`}>
+          <div class="wedding-photo">
+            <Picture name={item.image} sizes="(min-width: 900px) 55vw, 100vw" />
+          </div>
+          <div class="wedding-copy">
+            <p class="kicker dark">{item.kicker}</p>
+            <h2 class="script" id={`${item.id}-title`}>{item.name}</h2>
+            <p class="mood">{item.mood}</p>
+            {item.paragraphs.map((paragraph) => <p>{paragraph}</p>)}
+            <h3>Still to decide</h3>
+            <ul>
+              {item.thingsToDecide.map((entry) => <li>{entry}</li>)}
+            </ul>
+            <dl class="facts">
+              {
+                item.placeholders.map((entry) => (
+                  <div>
+                    <dt>{entry.label}</dt>
+                    <dd>{entry.value}</dd>
+                  </div>
+                ))
+              }
+            </dl>
+            <p>
+              <a class="text-link" href={`/lookbook?celebration=${item.id}`}>
+                {related.length} {related.length === 1 ? "look" : "looks"} on the {item.name} board
+              </a>
+            </p>
+          </div>
+        </section>
+      );
+    })
+  }
+
+  <section class="band" id="together">
+    <div class="band-inner">
+      <h2 class="script">How the three fit together</h2>
+      <Ornament />
+      <p class="lede center">
+        The celebrations are separate, but the story is one. This is a working comparison, and every cell can change.
+      </p>
+      <div class="table-wrap" role="region" aria-label="Comparison of the three celebrations" tabindex="0">
+        <table class="compare">
+          <thead>
+            <tr>
+              <th scope="col">Celebration</th>
+              <th scope="col">Mood</th>
+              <th scope="col">Palette</th>
+              <th scope="col">Content angle</th>
+              <th scope="col">Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            {
+              celebrations.map((item) => (
+                <tr>
+                  <th scope="row"><a href={`#${item.id}`}>{item.name}</a></th>
+                  <td data-label="Mood">{item.mood}</td>
+                  <td data-label="Palette">{item.palette}</td>
+                  <td data-label="Content angle">{item.contentAngle}</td>
+                  <td data-label="Status">Details to be confirmed</td>
+                </tr>
+              ))
+            }
+          </tbody>
+        </table>
+      </div>
+      <p class="center"><a class="orn-btn" href="/lookbook">
+        <i class="gem a"></i><i class="gem b"></i><i class="gem c"></i><i class="gem d"></i>
+        Open the lookbook
+      </a></p>
+    </div>
+  </section>
+</Base>

@@ -1,5 +1,5 @@
 {
-  "name": "prism-and-pollen",
+  "name": "tara-bridal-creator",
   "version": "1.0.0",
   "private": true,
   "type": "module",
@@ -12,18 +12,23 @@
     "preview": "astro preview",
     "typecheck": "astro check",
     "test": "vitest run",
+    "images": "node scripts/optimize-images.mjs",
     "test:links": "node scripts/check-links.mjs",
     "test:browser": "node scripts/browser-qa.mjs",
+    "screenshots": "node scripts/screenshots.mjs",
     "check": "npm run typecheck && npm test && npm run build && npm run test:links && npm run test:browser"
   },
   "dependencies": {
     "@fontsource/cormorant-garamond": "^5.2.8",
     "@fontsource/italianno": "^5.2.8",
+    "@fontsource/jost": "^5.3.0",
     "astro": "^5.15.9"
   },
   "devDependencies": {
     "@astrojs/check": "^0.9.6",
+    "@types/node": "^22.20.5",
     "playwright": "^1.57.0",
+    "sharp": "^0.34.5",
     "typescript": "^5.9.3",
     "vitest": "^3.2.4"
   }

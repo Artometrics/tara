@@ -1,0 +1,29 @@
+---
+import Plate from "./Plate.astro";
+import { readingMinutes, type Post } from "../data/journal";
+import type { PaletteKey } from "../data/looks";
+
+interface Props {
+  post: Post;
+  tone?: PaletteKey[];
+}
+
+const { post, tone } = Astro.props;
+const palettes: Record<string, PaletteKey[]> = {
+  india: ["marigold", "blush"],
+  italy: ["terracotta", "ivory"],
+  america: ["blush", "ivory"],
+};
+const palette = tone ?? (post.celebration ? palettes[post.celebration] : ["blush", "marigold"]);
+---
+
+<article class="card-wrap">
+  <a class="card" href={`/journal/${post.slug}`}>
+    <div class="frame">
+      <Plate motif={post.motif} palette={palette} ratio="4/3" label="Cover slot" />
+    </div>
+    <p class="meta">{post.category} · Starter draft · {readingMinutes(post)} min</p>
+    <h2>{post.title}</h2>
+    <p class="blurb">{post.dek}</p>
+  </a>
+</article>

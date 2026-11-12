@@ -1,0 +1,39 @@
+---
+import Picture from "./Picture.astro";
+import Plate from "./Plate.astro";
+import { celebrationById } from "../data/site";
+import { momentLabels, type Look } from "../data/looks";
+
+interface Props {
+  look: Look;
+  sizes?: string;
+}
+
+const { look, sizes = "(min-width: 980px) 33vw, (min-width: 720px) 50vw, 100vw" } = Astro.props;
+const celebration = celebrationById(look.celebration);
+---
+
+<article
+  class="card-wrap"
+  data-card
+  data-slug={look.slug}
+  data-title={look.title}
+  data-celebration={look.celebration}
+  data-moment={look.moment}
+  data-palette={look.palette.join(",")}
+>
+  <a class="card" href={`/lookbook/${look.slug}`}>
+    <div class="frame">
+      {
+        look.image ? (
+          <Picture name={look.image} sizes={sizes} />
+        ) : (
+          <Plate motif={look.motif} palette={look.palette} label={`${celebration.name} look`} />
+        )
+      }
+    </div>
+    <p class="meta">{celebration.name} · {momentLabels[look.moment]}</p>
+    <h2>{look.title}</h2>
+    <p class="blurb">{look.summary}</p>
+  </a>
+</article>

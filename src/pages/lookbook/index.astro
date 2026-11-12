@@ -1,0 +1,84 @@
+---
+import Base from "../../components/Base.astro";
+import LookCard from "../../components/LookCard.astro";
+import Ornament from "../../components/Ornament.astro";
+import { looks, momentLabels, paletteLabels } from "../../data/looks";
+import { celebrations } from "../../data/site";
+---
+
+<Base title="Lookbook" description="Bridal outfit and styling inspiration for the India, Italy and America celebrations. Not a shop.">
+  <header class="collection-head">
+    <p class="kicker dark">Inspiration, not a shop</p>
+    <h1 class="script">Lookbook</h1>
+    <Ornament />
+    <p class="lede">
+      Ideas for each celebration, with the questions worth asking before anything is bought. No brands, prices or links to
+      buy.
+    </p>
+  </header>
+  <div class="toolbar">
+    <button class="filter-launch" id="filter-open" type="button" aria-controls="filter-dialog" aria-expanded="false">
+      <span class="filter-mark" aria-hidden="true"></span>
+      Filter &amp; sort
+    </button>
+    <p class="catalog-note"><span data-count>{looks.length}</span> of {looks.length} looks</p>
+  </div>
+  <div class="card-grid collection-grid" data-grid>
+    {looks.map((look) => <LookCard look={look} />)}
+  </div>
+  <p class="filter-empty" data-filter-empty hidden>No looks match those filters yet.</p>
+  <p class="catalog-note center">Only one look has an illustration so far. The others use drawn placeholders.</p>
+
+  <dialog class="drawer filter-drawer" id="filter-dialog" aria-labelledby="filter-title">
+    <div class="drawer-head">
+      <h2 class="script" id="filter-title">Filter &amp; sort</h2>
+      <button class="icon-btn" type="button" data-close aria-label="Close filters">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6 18 18M18 6 6 18"></path></svg>
+      </button>
+    </div>
+    <div class="drawer-body">
+      <h3 class="sort-label">Sort by</h3>
+      <div class="sort-row">
+        <button type="button" data-sort="curated" aria-pressed="true">Curated order</button>
+        <button type="button" data-sort="az" aria-pressed="false">A to Z</button>
+      </div>
+      <details class="filter-acc" open>
+        <summary>Celebration</summary>
+        <div class="check-grid">
+          {
+            celebrations.map((item) => (
+              <label class="check"><input type="checkbox" name="celebration" value={item.id} />{item.name}</label>
+            ))
+          }
+        </div>
+      </details>
+      <details class="filter-acc" open>
+        <summary>Moment</summary>
+        <div class="check-grid">
+          {
+            Object.entries(momentLabels).map(([value, label]) => (
+              <label class="check"><input type="checkbox" name="moment" value={value} />{label}</label>
+            ))
+          }
+        </div>
+      </details>
+      <details class="filter-acc">
+        <summary>Color story</summary>
+        <div class="check-grid">
+          {
+            Object.entries(paletteLabels).map(([value, label]) => (
+              <label class="check"><input type="checkbox" name="palette" value={value} />{label}</label>
+            ))
+          }
+        </div>
+      </details>
+      <div class="drawer-actions">
+        <button class="linkish" type="button" data-clear-filters>Clear all</button>
+        <button class="orn-btn" type="button" data-apply-filters>
+          <i class="gem a"></i><i class="gem b"></i><i class="gem c"></i><i class="gem d"></i>
+          Apply
+        </button>
+      </div>
+    </div>
+  </dialog>
+</Base>
