@@ -1,0 +1,3 @@
+# Prism & Pollen is a local prototype. Do not index it.
+User-agent: *
+Disallow: /

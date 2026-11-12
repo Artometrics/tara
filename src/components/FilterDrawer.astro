@@ -1,0 +1,108 @@
+---
+interface Props {
+  sizes: string[];
+  colors: string[];
+  categories: string[];
+  sizeHeading: string;
+}
+const { sizes, colors, categories, sizeHeading } = Astro.props;
+const bands = [
+  { id: "under-100", label: "Under $100" },
+  { id: "100-300", label: "$100 – $300" },
+  { id: "300-500", label: "$300 – $500" },
+  { id: "500-plus", label: "$500 and over" },
+];
+const missing = ["Pattern", "Material", "Special processes", "Sleeve length", "Dress length", "Type"];
+---
+
+<dialog class="drawer filter-drawer" id="filter-dialog" aria-labelledby="filter-title">
+  <div class="drawer-head">
+    <h2 class="script" id="filter-title">Filter &amp; sort</h2>
+    <button class="icon-btn" type="button" data-close aria-label="Close filters">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6 18 18M18 6 6 18"></path></svg>
+    </button>
+  </div>
+  <div class="drawer-body">
+    <h3 class="sort-label">Sort by</h3>
+    <div class="sort-row">
+      <button type="button" data-sort="featured" aria-pressed="true">Best selling</button>
+      <button type="button" data-sort="price-asc" aria-pressed="false">Price: low to high</button>
+      <button type="button" data-sort="price-desc" aria-pressed="false">Price: high to low</button>
+    </div>
+    <p class="sr-only">Best selling uses catalog order. There is no sales rank.</p>
+    <div class="switch-row">
+      <span id="stock-label">In stock</span>
+      <button type="button" role="switch" aria-checked="false" aria-describedby="stock-note" disabled>Off</button>
+    </div>
+    <p id="stock-note" class="sr-only">Inventory is off. This preview cannot filter by stock.</p>
+    <details class="filter-acc">
+      <summary>{sizeHeading}</summary>
+      <div class="check-grid">
+        {
+          sizes.map((label) => (
+            <label class="check">
+              <input type="checkbox" name="size" value={label} />
+              {label}
+            </label>
+          ))
+        }
+      </div>
+    </details>
+    <details class="filter-acc">
+      <summary>Color</summary>
+      <div class="check-grid">
+        {
+          colors.map((label) => (
+            <label class="check">
+              <input type="checkbox" name="color" value={label} />
+              {label}
+            </label>
+          ))
+        }
+      </div>
+    </details>
+    {
+      categories.length > 1 ? (
+        <details class="filter-acc">
+          <summary>Category</summary>
+          <div class="check-grid">
+            {categories.map((label) => (
+              <label class="check">
+                <input type="checkbox" name="category" value={label} />
+                {label}
+              </label>
+            ))}
+          </div>
+        </details>
+      ) : null
+    }
+    {
+      missing.map((label) => (
+        <details class="filter-acc">
+          <summary>{label}</summary>
+          <p class="quiet">Not recorded in this catalog.</p>
+        </details>
+      ))
+    }
+    <details class="filter-acc">
+      <summary>Price</summary>
+      <div class="check-grid">
+        {
+          bands.map((band) => (
+            <label class="check">
+              <input type="checkbox" name="price" value={band.id} />
+              {band.label}
+            </label>
+          ))
+        }
+      </div>
+    </details>
+    <div class="drawer-actions">
+      <button class="linkish" type="button" data-clear-filters>Clear all</button>
+      <button class="orn-btn" type="button" data-apply-filters>
+        <i class="gem a"></i><i class="gem b"></i><i class="gem c"></i><i class="gem d"></i>
+        Apply
+      </button>
+    </div>
+  </div>
+</dialog>

@@ -1,0 +1,40 @@
+---
+import Base from "../components/Base.astro";
+import FilterDrawer from "../components/FilterDrawer.astro";
+import ProductCard from "../components/ProductCard.astro";
+import { products, uniqueLabels } from "../data/catalog";
+
+const sizes = uniqueLabels(products, (product) => product.variants.map((variant) => variant.label));
+const colors = uniqueLabels(products, (product) => [product.color]);
+const categories = uniqueLabels(products, (product) => [product.category]);
+---
+
+<Base title="Search" description="Search the Prism & Pollen preview in this browser.">
+  <header class="collection-head" data-search-page>
+    <h1 class="script">Search results</h1>
+  </header>
+  <form class="results-search" action="/search" method="get" role="search">
+    <label class="search-field">
+      <span class="sr-only">Search query</span>
+      <input id="search-page-input" name="q" type="search" autocomplete="off" />
+    </label>
+    <button class="icon-btn" id="search-page-clear" type="button" aria-label="Clear search">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6 18 18M18 6 6 18"></path></svg>
+    </button>
+    <button class="icon-btn" type="submit" aria-label="Submit search">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6"></circle><path d="M16 16.5 20 21"></path></svg>
+    </button>
+  </form>
+  <p class="catalog-note" id="search-page-copy">Type a word to search this preview.</p>
+  <div class="toolbar">
+    <button class="filter-launch" id="filter-open" type="button" aria-controls="filter-dialog" aria-expanded="false">
+      <span class="filter-mark" aria-hidden="true"></span>
+      Filter &amp; sort
+    </button>
+  </div>
+  <div class="product-grid search-grid" data-grid>
+    {products.map((product) => <ProductCard product={product} plain />)}
+  </div>
+  <p class="filter-empty" data-filter-empty hidden>No matches in this preview.</p>
+  <FilterDrawer sizes={sizes} colors={colors} categories={categories} sizeHeading="Size" />
+</Base>

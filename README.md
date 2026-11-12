@@ -1,37 +1,28 @@
-# Tara
+# Prism & Pollen
 
-Expo Router + UniWind fashion boutique for **Tara**. Static web export deploys to Netlify.
+Static Astro preview of a paper-ground clothing edit. Representative pages only — not a full catalog clone. Payments, accounts, email, SMS, reviews, gift-card issuance, inventory, and fulfillment are off. The bag stays in this browser.
 
-## Stack
-
-- Expo SDK 57 + Expo Router
-- UniWind (Tailwind CSS v4)
-- `react-native-web` for Netlify static hosting
-- Netlify Function for Stripe Checkout
-
-## Requirements
-
-- Node.js 22+ (see `.nvmrc`)
+The twelve products are the supplied reference catalog. Rights are not cleared and stock is unknown. See `docs/PROVENANCE.md` and `docs/FIDELITY.md`. Pages send `noindex` and `robots.txt` disallows crawlers. The campaign homepage and motion are waiting on new captures.
 
 ## Commands
 
 | Command | Action |
 | :------ | :----- |
 | `npm install` | Install dependencies |
-| `npm run web` | Expo web dev server |
-| `npm start` | Expo start |
-| `npm run build` | `expo export --platform web` → `dist/` |
-| `npx netlify dev` | Local site + functions |
+| `npm run dev` | Local preview |
+| `npm run build` | Static site in `dist/` |
+| `npm run typecheck` | `astro check` |
+| `npm test` | Unit tests |
+| `npm run test:links` | Internal link check (after build) |
+| `npm run test:browser` | Browser QA at 320, 390, and desktop |
+| `npm run check` | All of the above |
 
-## Environment
+Node.js 22 or newer (`.nvmrc`).
 
-Copy `.env.example` → `.env`:
+## Routes
 
-```bash
-STRIPE_SECRET_KEY=sk_test_...
-PUBLIC_STRIPE_PUBLISHABLE_KEY=pk_test_...
-```
+Home, collection, product, gift note, search, bag, journal, lookbook, and placeholder pages for questions, policies, about, impact, contact, account, and shops. Unknown URLs use the 404 page.
 
-## Brand hubs
+## Hosting config
 
-See prior Notion / Figma / Canva links in git history README revisions, or regenerate from the project brief.
+`netlify.toml`, `firebase.json`, and `public/_headers` are deploy-ready for **this** project only. They set `X-Robots-Tag: noindex`. This build does not deploy anywhere and does not touch another site.

@@ -1,0 +1,10 @@
+---
+description: Astro config for the static Prism & Pollen preview.
+globs:
+  - astro.config.mjs
+---
+
+# Astro config
+
+- Static output only. No server adapter.
+- Do not add a sitemap that invites indexing. `robots.txt` disallows crawlers.

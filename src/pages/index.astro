@@ -1,0 +1,145 @@
+---
+import Base from "../components/Base.astro";
+import Ornament from "../components/Ornament.astro";
+
+const explore = [
+  { src: "/campaign/HP_CATEGORIES_1_460X546_HOLIDAY_2_2026.jpg", label: "Holiday occasion shop", href: "/collections/dresses", class: "ex-1" },
+  { src: "/campaign/HP_CATEGORIES_2_440X440_HOLIDAY_2_2026.jpg", label: "Noir edit", href: "/collections/dresses", class: "ex-2" },
+  { src: "/campaign/HP_CATEGORIES_3_400X305_HOLIDAY_2_2026.jpg", label: "Coats & jackets", href: "/collections/outerwear", class: "ex-3" },
+  { src: "/campaign/HP_CATEGORIES_4_340X416_HOLIDAY_1_2026.png", label: "Founders' favorites", href: "/pages/about", class: "ex-4" },
+  { src: "/campaign/HP_CATEGORIES_5_333X254_HOLIDAY_2_2026.png", label: "Finishing touches", href: "/collections/bags", class: "ex-5" },
+];
+
+const featured = [
+  {
+    title: "Olivia Pant",
+    price: 32800,
+    image: "/campaign/OLIVIAPANT_BLACK_17.jpg",
+    frame: "/campaign/doen-frame-1.webp",
+    sizes: ["0", "2", "4", "6", "8", "10", "12", "14"],
+    handle: "olivia-pant-black",
+  },
+  {
+    title: "Fairchild Crystal Cashmere Cardigan",
+    price: 44800,
+    image: "/campaign/FAIRCHILDCRYSTALCASHMERECARDIGAN_BLACK_04.jpg",
+    frame: "/campaign/doen-frame-2.webp",
+    sizes: ["XS", "S", "M", "L", "XL"],
+    handle: "fairchild-crystal-cashmere-cardigan-black",
+  },
+  {
+    title: "Zinnia Skirt",
+    price: 34800,
+    image: "/campaign/ZINNIASKIRT_CHAMPAGNEGOLD_09.jpg",
+    frame: "/campaign/doen-frame-3.webp",
+    sizes: ["XS", "S", "M", "L", "XL"],
+    handle: "zinnia-skirt-champagne-gold",
+  },
+];
+
+---
+
+<Base title="Prism & Pollen" description="Homepage preview from the captured reference. Nothing is for sale.">
+  <section class="hero" id="hero">
+    <picture>
+      <source media="(min-width: 900px)" srcset="/campaign/HP_HERO_DESKTOP_HOLIDAY_2_2026_ANISE_V5.jpg" />
+      <img src="/campaign/HP_HERO_MOBILE_HOLIDAY_2_2026_ANISE_V5.jpg" alt="Holiday Chapter Two campaign still. Reference photograph, rights not cleared." />
+    </picture>
+    <div class="hero-copy">
+      <h1 class="caps">Holiday Chapter Two</h1>
+      <Ornament />
+    </div>
+  </section>
+
+  <div class="tout-row" id="touts">
+    <a class="story" href="/collections/dresses">
+      <img src="/campaign/HP_L_TOUT_HOLIDAY_2_2026.jpg" alt="Dresses campaign still." />
+      <span class="story-label">Dresses<i class="gem a"></i><i class="gem b"></i><i class="gem c"></i><i class="gem d"></i></span>
+    </a>
+    <a class="story" href="/collections/tops">
+      <img src="/campaign/HP_R_TOUT_HOLIDAY_2_2026.jpg" alt="Tops campaign still." />
+      <span class="story-label">Tops<i class="gem a"></i><i class="gem b"></i><i class="gem c"></i><i class="gem d"></i></span>
+    </a>
+  </div>
+
+  <section class="explore" id="explore">
+    <h2 class="script explore-title">Explore</h2>
+    <div class="explore-collage" aria-label="Explore">
+      {
+        explore.map((card) => (
+          <a class:list={["explore-card", card.class]} href={card.href}>
+            <img src={card.src} alt="" />
+            <span>{card.label}</span>
+          </a>
+        ))
+      }
+    </div>
+  </section>
+
+  <section class="video-strip" id="campaign-video-section" aria-label="Campaign video">
+    <video
+      id="campaign-video"
+      autoplay
+      muted
+      loop
+      playsinline
+      poster="/campaign/HP_HERO_DESKTOP_HOLIDAY_2_2026_ANISE_V5.jpg"
+    >
+      <source src="/campaign/holiday-chapter-two-desktop.mp4" type="video/mp4" media="(min-width: 900px)" />
+      <source src="/campaign/holiday-chapter-two-mobile.mp4" type="video/mp4" />
+    </video>
+    <button id="video-pause" type="button">Pause background video</button>
+    <p class="quiet video-note">Reference campaign video. Rights not cleared. Duration was not measured.</p>
+  </section>
+
+  <section class="section" id="featured">
+    <h2 class="script">Featured</h2>
+    <Ornament />
+  </section>
+  <div class="featured-row">
+    {
+      featured.map((item) => (
+        <article class="featured-card" data-featured={item.handle}>
+          <div class="featured-photo">
+            <img src={item.image} alt="" />
+            <img class="featured-frame" src={item.frame} alt="" />
+          </div>
+          <h3>{item.title}</h3>
+          <p class="featured-price" data-price={item.price}>${item.price / 100}</p>
+          <div class="featured-sizes">
+            {item.sizes.map((size) => (
+              <button
+                type="button"
+                class="quick-size"
+                data-quick-add
+                data-handle={item.handle}
+                data-title={item.title}
+                data-size={size}
+                data-price={item.price}
+                data-image={item.image}
+              >
+                {size}
+              </button>
+            ))}
+          </div>
+          </article>
+      ))
+    }
+  </div>
+
+  <section class="shops" id="shops">
+    <img src="/campaign/SHOPS_HOMEPAGE.jpg" alt="Reference shop interior photograph. Not a Prism & Pollen store." />
+    <div>
+      <div class="vine-rule" aria-hidden="true"></div>
+      <h2 class="script">Our Shops</h2>
+      <p class="shop-lines">
+        <span>Brentwood Country Mart · Montecito Country Mart · West Village</span>
+        <span>Lido Marina Village · Sag Harbor</span>
+        <span>Marin Country Mart · Nantucket · Madison Ave</span>
+        <span>Wilmette</span>
+      </p>
+      <div class="vine-rule" aria-hidden="true"></div>
+      <a class="orn-btn" href="/pages/shops">Visit our stores</a>
+    </div>
+  </section>
+</Base>

@@ -1,42 +1,30 @@
 {
-  "name": "tara",
+  "name": "prism-and-pollen",
   "version": "1.0.0",
   "private": true,
-  "main": "expo-router/entry",
+  "type": "module",
   "engines": {
     "node": ">=22"
   },
   "scripts": {
-    "start": "expo start",
-    "dev": "expo start",
-    "android": "expo start --android",
-    "ios": "expo start --ios",
-    "web": "expo start --web",
-    "build": "expo export --platform web",
-    "lint": "expo lint"
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "typecheck": "astro check",
+    "test": "vitest run",
+    "test:links": "node scripts/check-links.mjs",
+    "test:browser": "node scripts/browser-qa.mjs",
+    "check": "npm run typecheck && npm test && npm run build && npm run test:links && npm run test:browser"
   },
   "dependencies": {
-    "@expo-google-fonts/cormorant-garamond": "^0.4.0",
-    "@expo/metro-runtime": "~57.0.12",
-    "expo": "^57.0.1",
-    "expo-constants": "~57.0.13",
-    "expo-font": "~57.0.1",
-    "expo-image": "~57.0.3",
-    "expo-linking": "~57.0.7",
-    "expo-router": "~57.0.2",
-    "expo-status-bar": "~57.0.0",
-    "react": "19.2.3",
-    "react-dom": "19.2.3",
-    "react-native": "0.86.0",
-    "react-native-safe-area-context": "~5.7.0",
-    "react-native-screens": "~4.26.0",
-    "react-native-web": "^0.21.2",
-    "tailwindcss": "~4.1.16",
-    "uniwind": "~1.0.0"
+    "@fontsource/cormorant-garamond": "^5.2.8",
+    "@fontsource/italianno": "^5.2.8",
+    "astro": "^5.15.9"
   },
   "devDependencies": {
-    "@types/react": "~19.2.14",
-    "playwright": "^1.62.1",
-    "typescript": "~5.9.0"
+    "@astrojs/check": "^0.9.6",
+    "playwright": "^1.57.0",
+    "typescript": "^5.9.3",
+    "vitest": "^3.2.4"
   }
 }

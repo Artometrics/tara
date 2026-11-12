@@ -1,0 +1,31 @@
+---
+import Plate from "./Plate.astro";
+import { formatUSD } from "../lib/money";
+import type { Product } from "../data/catalog";
+
+interface Props {
+  product: Product;
+  plain?: boolean;
+}
+const { product, plain = false } = Astro.props;
+const price = Math.min(...product.variants.map((variant) => variant.price));
+const priceLabel =
+  product.kind === "gift-card" ? `From ${formatUSD(price)}` : formatUSD(price);
+---
+
+<article
+  class="card-wrap"
+  data-card
+  data-handle={product.handle}
+  data-price={price}
+  data-category={product.category}
+  data-color={product.color}
+  data-sizes={product.variants.map((variant) => variant.label).join("|")}
+>
+  <a class="card" href={`/products/${product.handle}`}>
+    <Plate image={product.image} alt="" contain={!plain && Boolean(product.image)} plain={plain} />
+    <h2>{product.title}</h2>
+    <p class="meta">{product.color || "Reference"}</p>
+    <p class="price">{priceLabel}</p>
+  </a>
+</article>

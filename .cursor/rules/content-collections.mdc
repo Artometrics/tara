@@ -1,0 +1,10 @@
+---
+description: Catalog data for the Prism & Pollen preview.
+globs:
+  - src/data/**
+---
+
+# Catalog
+
+- Product, collection, journal, and utility copy live in `src/data/catalog.ts`.
+- There is no content-collection schema. Do not invent stock, prices as offers, or reference-house names.

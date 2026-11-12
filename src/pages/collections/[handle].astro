@@ -1,0 +1,48 @@
+---
+import Base from "../../components/Base.astro";
+import FilterDrawer from "../../components/FilterDrawer.astro";
+import ProductCard from "../../components/ProductCard.astro";
+import {
+  collections,
+  productsIn,
+  uniqueLabels,
+  type Collection,
+  type Product,
+} from "../../data/catalog";
+
+export function getStaticPaths() {
+  return collections.map((collection) => ({
+    params: { handle: collection.handle },
+    props: { collection },
+  }));
+}
+
+interface Props {
+  collection: Collection;
+}
+
+const { collection } = Astro.props;
+const items: Product[] = productsIn(collection);
+const sizes = uniqueLabels(items, (product) => product.variants.map((variant) => variant.label));
+const colors = uniqueLabels(items, (product) => [product.color]);
+const categories = uniqueLabels(items, (product) => [product.category]);
+const sizeHeading = items.every((product) => product.kind === "gift-card") ? "Amount" : "Size";
+---
+
+<Base title={collection.title} description={collection.intro}>
+  <header class="collection-head">
+    <h1 class="script">{collection.title}</h1>
+  </header>
+  <div class="toolbar">
+    <button class="filter-launch" id="filter-open" type="button" aria-controls="filter-dialog" aria-expanded="false">
+      <span class="filter-mark" aria-hidden="true"></span>
+      Filter &amp; sort
+    </button>
+  </div>
+  <div class="product-grid collection-grid" data-grid>
+    {items.map((product) => <ProductCard product={product} plain />)}
+  </div>
+  <p class="filter-empty" data-filter-empty hidden>Nothing in this preview matches those filters.</p>
+  <p class="catalog-note"><span data-count>{items.length}</span> in this preview. Not the live collection.</p>
+  <FilterDrawer sizes={sizes} colors={colors} categories={categories} sizeHeading={sizeHeading} />
+</Base>

@@ -1,0 +1,1038 @@
+{
+  "source": "public product HTML and products-12.json handoff, retrieved 2026-11-08",
+  "rights": "Reference media. Not commercially cleared. Prototype only. Stock unknown.",
+  "products": [
+    {
+      "handle": "quinn-dress-salt",
+      "title": "Quinn Dress",
+      "pageTitle": "Quinn Dress - Salt",
+      "color": "Salt",
+      "category": "Dresses",
+      "kind": "apparel",
+      "sourceUrl": "https://www.shopdoen.com/products/quinn-dress-salt",
+      "description": "In crisp 100% organic cotton poplin, the Quinn Dress\u2014a Favorite Character\u2014 features a scoop neckline with an adjustable tie and a playful keyhole detail, a gathered bust, and short puffed sleeves. A fitted bodice with elasticized smocking gives way to a midi-length A-line skirt.",
+      "imageNote": "Gallery order is the order found in public HTML. It was not visually checked against the live page.",
+      "images": [
+        {
+          "src": "/reference/quinn-dress-salt/01.jpg",
+          "source": "https://www.shopdoen.com/cdn/shop/files/QUINN-DRESS_SALT-01.jpg",
+          "filename": "QUINN-DRESS_SALT-01.jpg"
+        },
+        {
+          "src": "/reference/quinn-dress-salt/02.jpg",
+          "source": "https://www.shopdoen.com/cdn/shop/files/QUINN-DRESS_SALT-02.jpg",
+          "filename": "QUINN-DRESS_SALT-02.jpg"
+        },
+        {
+          "src": "/reference/quinn-dress-salt/03.jpg",
+          "source": "https://www.shopdoen.com/cdn/shop/files/QUINN-DRESS_SALT-03.jpg",
+          "filename": "QUINN-DRESS_SALT-03.jpg"
+        },
+        {
+          "src": "/reference/quinn-dress-salt/04.jpg",
+          "source": "https://www.shopdoen.com/cdn/shop/files/QUINN-DRESS_SALT-04.jpg",
+          "filename": "QUINN-DRESS_SALT-04.jpg"
+        },
+        {
+          "src": "/reference/quinn-dress-salt/05.jpg",
+          "source": "https://www.shopdoen.com/cdn/shop/files/QUINN-DRESS_SALT-07.jpg",
+          "filename": "QUINN-DRESS_SALT-07.jpg"
+        },
+        {
+          "src": "/reference/quinn-dress-salt/06.jpg",
+          "source": "https://www.shopdoen.com/cdn/shop/files/QUINN-DRESS_SALT-11.jpg",
+          "filename": "QUINN-DRESS_SALT-11.jpg"
+        },
+        {
+          "src": "/reference/quinn-dress-salt/07.jpg",
+          "source": "https://www.shopdoen.com/cdn/shop/files/QUINN-DRESS_SALT-12.jpg",
+          "filename": "QUINN-DRESS_SALT-12.jpg"
+        },
+        {
+          "src": "/reference/quinn-dress-salt/08.jpg",
+          "source": "https://www.shopdoen.com/cdn/shop/files/QUINN-DRESS_SALT-13.jpg",
+          "filename": "QUINN-DRESS_SALT-13.jpg"
+        },
+        {
+          "src": "/reference/quinn-dress-salt/09.png",
+          "source": "https://www.shopdoen.com/cdn/shop/files/QUINN_DRESS_-_SALT_CLEARFLAT_c6a90feb-6902-4dd0-be29-f46201185615.png",
+          "filename": "QUINN_DRESS_-_SALT_CLEARFLAT_c6a90feb-6902-4dd0-be29-f46201185615.png"
+        }
+      ],
+      "variants": [
+        {
+          "id": "40107503059057",
+          "label": "XXS",
+          "price": 27800,
+          "referenceSku": "270-2545-100-WH-XXS"
+        },
+        {
+          "id": "40107503091825",
+          "label": "XS",
+          "price": 27800,
+          "referenceSku": "270-2545-100-WH-XS"
+        },
+        {
+          "id": "40107503124593",
+          "label": "S",
+          "price": 27800,
+          "referenceSku": "270-2545-100-WH-S"
+        },
+        {
+          "id": "40107503157361",
+          "label": "M",
+          "price": 27800,
+          "referenceSku": "270-2545-100-WH-M"
+        },
+        {
+          "id": "40107503190129",
+          "label": "L",
+          "price": 27800,
+          "referenceSku": "270-2545-100-WH-L"
+        },
+        {
+          "id": "40107503222897",
+          "label": "XL",
+          "price": 27800,
+          "referenceSku": "270-2545-100-WH-XL"
+        },
+        {
+          "id": "40107503255665",
+          "label": "XXL",
+          "price": 27800,
+          "referenceSku": "270-2545-100-WH-XXL"
+        }
+      ],
+      "rights": "Reference photograph and copy from public HTML. Not cleared for Prism & Pollen. Stock unknown.",
+      "availability": "unverified"
+    },
+    {
+      "handle": "sebastiane-skirt-powder",
+      "title": "Sebastiane Skirt",
+      "pageTitle": "Sebastiane Skirt - Powder",
+      "color": "Powder",
+      "category": "Skirts",
+      "kind": "apparel",
+      "sourceUrl": "https://www.shopdoen.com/products/sebastiane-skirt-powder",
+      "description": "Discover the Sebastiane Skirt in Powder from D\u00d4EN. In 100% organic cotton poplin, the D\u00d4EN Sebastiane Skirt is a forever-favorite of our styling team.",
+      "imageNote": "Public og:image on this page is a Lois tank campaign frame, not this skirt. Only the named flat lay is stored. On-model gallery was not in that HTML under this product name.",
+      "images": [
+        {
+          "src": "/reference/sebastiane-skirt-powder/01.png",
+          "source": "https://www.shopdoen.com/cdn/shop/files/SEBASTIANE_SKIRT_-_POWDER_CLEARFLAT_b3b25b22-018d-4112-b09d-7499f9186b9a.png",
+          "filename": "SEBASTIANE_SKIRT_-_POWDER_CLEARFLAT_b3b25b22-018d-4112-b09d-7499f9186b9a.png"
+        }
+      ],
+      "variants": [
+        {
+          "id": "40029591797873",
+          "label": "XXS",
+          "price": 22800,
+          "referenceSku": "205-3060-100-WH-XXS"
+        },
+        {
+          "id": "32281384157297",
+          "label": "XS",
+          "price": 22800,
+          "referenceSku": "205-3060-100-WH-XS"
+        },
+        {
+          "id": "32281384190065",
+          "label": "S",
+          "price": 22800,
+          "referenceSku": "205-3060-100-WH-S"
+        },
+        {
+          "id": "32281384222833",
+          "label": "M",
+          "price": 22800,
+          "referenceSku": "205-3060-100-WH-M"
+        },
+        {
+          "id": "32281384255601",
+          "label": "L",
+          "price": 22800,
+          "referenceSku": "205-3060-100-WH-L"
+        },
+        {
+          "id": "32281384288369",
+          "label": "XL",
+          "price": 22800,
+          "referenceSku": "205-3060-100-WH-XL"
+        },
+        {
+          "id": "40029591830641",
+          "label": "XXL",
+          "price": 22800,
+          "referenceSku": "205-3060-100-WH-XXL"
+        }
+      ],
+      "rights": "Reference photograph and copy from public HTML. Not cleared for Prism & Pollen. Stock unknown.",
+      "availability": "unverified"
+    },
+    {
+      "handle": "the-jane-blouse-black-2",
+      "title": "The Jane Blouse",
+      "pageTitle": "The Jane Blouse - Black",
+      "color": "Black",
+      "category": "Tops",
+      "kind": "apparel",
+      "sourceUrl": "https://www.shopdoen.com/products/the-jane-blouse-black-2",
+      "description": "Discover the Jane Blouse in Black from D\u00d4EN. In a cotton blend, the D\u00d4EN Jane Blouse is inspired by our favorite muse, Jane Birkin.",
+      "imageNote": "Public og:image is a Shep jean frame. Stored files are the Jane blouse frames from the same public HTML.",
+      "images": [
+        {
+          "src": "/reference/the-jane-blouse-black-2/01.jpg",
+          "source": "https://www.shopdoen.com/cdn/shop/products/DOEN-2021-FALL-2_JANE-BLOUSE_BLACK-06.jpg",
+          "filename": "DOEN-2021-FALL-2_JANE-BLOUSE_BLACK-06.jpg"
+        },
+        {
+          "src": "/reference/the-jane-blouse-black-2/02.jpg",
+          "source": "https://www.shopdoen.com/cdn/shop/products/DOEN-2021-FALL-2_JANE-BLOUSE_BLACK-05.jpg",
+          "filename": "DOEN-2021-FALL-2_JANE-BLOUSE_BLACK-05.jpg"
+        },
+        {
+          "src": "/reference/the-jane-blouse-black-2/03.jpg",
+          "source": "https://www.shopdoen.com/cdn/shop/products/DOEN-2021-FALL-2_JANE-BLOUSE_BLACK-03.jpg",
+          "filename": "DOEN-2021-FALL-2_JANE-BLOUSE_BLACK-03.jpg"
+        },
+        {
+          "src": "/reference/the-jane-blouse-black-2/04.jpg",
+          "source": "https://www.shopdoen.com/cdn/shop/products/DOEN-2021-FALL-2_JANE-BLOUSE_BLACK-04.jpg",
+          "filename": "DOEN-2021-FALL-2_JANE-BLOUSE_BLACK-04.jpg"
+        },
+        {
+          "src": "/reference/the-jane-blouse-black-2/05.png",
+          "source": "https://www.shopdoen.com/cdn/shop/files/THE_JANE_BLOUSE_-_BLACK_CLEARFLAT_ad9fc131-011e-468c-8266-4d9d8a99aac6.png",
+          "filename": "THE_JANE_BLOUSE_-_BLACK_CLEARFLAT_ad9fc131-011e-468c-8266-4d9d8a99aac6.png"
+        }
+      ],
+      "variants": [
+        {
+          "id": "39383834099825",
+          "label": "XXS",
+          "price": 15800,
+          "referenceSku": "101-1029-900-BK-XXS"
+        },
+        {
+          "id": "39383834132593",
+          "label": "XS",
+          "price": 15800,
+          "referenceSku": "101-1029-900-BK-XS"
+        },
+        {
+          "id": "39383834165361",
+          "label": "S",
+          "price": 15800,
+          "referenceSku": "101-1029-900-BK-S"
+        },
+        {
+          "id": "39383834198129",
+          "label": "M",
+          "price": 15800,
+          "referenceSku": "101-1029-900-BK-M"
+        },
+        {
+          "id": "39383834230897",
+          "label": "L",
+          "price": 15800,
+          "referenceSku": "101-1029-900-BK-L"
+        },
+        {
+          "id": "39383834263665",
+          "label": "XL",
+          "price": 15800,
+          "referenceSku": "101-1029-900-BK-XL"
+        },
+        {
+          "id": "39383834296433",
+          "label": "XXL",
+          "price": 15800,
+          "referenceSku": "101-1029-900-BK-XXL"
+        }
+      ],
+      "rights": "Reference photograph and copy from public HTML. Not cleared for Prism & Pollen. Stock unknown.",
+      "availability": "unverified"
+    },
+    {
+      "handle": "petra-cardigan-coral",
+      "title": "Petra Cardigan",
+      "pageTitle": "Petra Cardigan - Coral",
+      "color": "Coral",
+      "category": "Knitwear",
+      "kind": "apparel",
+      "sourceUrl": "https://www.shopdoen.com/products/petra-cardigan-coral",
+      "description": "In a soft blend of superfine alpaca and merino wool, our forever-favorite Petra Cardigan features a crew neck, fitted raglan sleeves, and ribbing at the neckline, cuffs, and hem.",
+      "imageNote": "Gallery order is the order found in public HTML. It was not visually checked against the live page.",
+      "images": [
+        {
+          "src": "/reference/petra-cardigan-coral/01.jpg",
+          "source": "https://www.shopdoen.com/cdn/shop/files/PETRACARDIGAN_CORAL_05-RETOUCHED.jpg",
+          "filename": "PETRACARDIGAN_CORAL_05-RETOUCHED.jpg"
+        },
+        {
+          "src": "/reference/petra-cardigan-coral/02.jpg",
+          "source": "https://www.shopdoen.com/cdn/shop/files/PETRACARDIGAN_CORAL_04-RETOUCHED.jpg",
+          "filename": "PETRACARDIGAN_CORAL_04-RETOUCHED.jpg"
+        },
+        {
+          "src": "/reference/petra-cardigan-coral/03.jpg",
+          "source": "https://www.shopdoen.com/cdn/shop/files/PETRACARDIGAN_CORAL_03_88e548a3-a348-4538-9fb4-955abfe21793.jpg",
+          "filename": "PETRACARDIGAN_CORAL_03_88e548a3-a348-4538-9fb4-955abfe21793.jpg"
+        },
+        {
+          "src": "/reference/petra-cardigan-coral/04.jpg",
+          "source": "https://www.shopdoen.com/cdn/shop/files/PETRACARDIGAN_CORAL_01_3e62c5c4-3bdb-4f31-baf1-26f613e3d979.jpg",
+          "filename": "PETRACARDIGAN_CORAL_01_3e62c5c4-3bdb-4f31-baf1-26f613e3d979.jpg"
+        },
+        {
+          "src": "/reference/petra-cardigan-coral/05.jpg",
+          "source": "https://www.shopdoen.com/cdn/shop/files/PETRACARDIGAN_CORAL_02_bcb8d113-9057-4448-a1d2-7b128fc180ec.jpg",
+          "filename": "PETRACARDIGAN_CORAL_02_bcb8d113-9057-4448-a1d2-7b128fc180ec.jpg"
+        },
+        {
+          "src": "/reference/petra-cardigan-coral/06.png",
+          "source": "https://www.shopdoen.com/cdn/shop/files/PETRA_CARDIGAN_-_CORAL_CLEARFLAT.png",
+          "filename": "PETRA_CARDIGAN_-_CORAL_CLEARFLAT.png"
+        }
+      ],
+      "variants": [
+        {
+          "id": "40257102905457",
+          "label": "XXS",
+          "price": 32800,
+          "referenceSku": "784-4320-1200-LOR-XXS"
+        },
+        {
+          "id": "40257102938225",
+          "label": "XS",
+          "price": 32800,
+          "referenceSku": "784-4320-1200-LOR-XS"
+        },
+        {
+          "id": "40257102970993",
+          "label": "S",
+          "price": 32800,
+          "referenceSku": "784-4320-1200-LOR-S"
+        },
+        {
+          "id": "40257103003761",
+          "label": "M",
+          "price": 32800,
+          "referenceSku": "784-4320-1200-LOR-M"
+        },
+        {
+          "id": "40257103036529",
+          "label": "L",
+          "price": 32800,
+          "referenceSku": "784-4320-1200-LOR-L"
+        },
+        {
+          "id": "40257103069297",
+          "label": "XL",
+          "price": 32800,
+          "referenceSku": "784-4320-1200-LOR-XL"
+        },
+        {
+          "id": "40257103102065",
+          "label": "XXL",
+          "price": 32800,
+          "referenceSku": "784-4320-1200-LOR-XXL"
+        }
+      ],
+      "rights": "Reference photograph and copy from public HTML. Not cleared for Prism & Pollen. Stock unknown.",
+      "availability": "unverified"
+    },
+    {
+      "handle": "merit-sweater-red-umber",
+      "title": "Merit Sweater",
+      "pageTitle": "Merit Sweater - Red Umber",
+      "color": "Red Umber",
+      "category": "Sweaters",
+      "kind": "apparel",
+      "sourceUrl": "https://www.shopdoen.com/products/merit-sweater-red-umber",
+      "description": "The Merit Sweater is an oversized V-neck pullover, crafted from a butter-soft cashmere-wool blend.",
+      "imageNote": "Gallery order is the order found in public HTML. It was not visually checked against the live page.",
+      "images": [
+        {
+          "src": "/reference/merit-sweater-red-umber/01.jpg",
+          "source": "https://www.shopdoen.com/cdn/shop/files/MERITSWEATER_REDUMBER_15.jpg",
+          "filename": "MERITSWEATER_REDUMBER_15.jpg"
+        },
+        {
+          "src": "/reference/merit-sweater-red-umber/02.jpg",
+          "source": "https://www.shopdoen.com/cdn/shop/files/MERITSWEATER_REDUMBER_16.jpg",
+          "filename": "MERITSWEATER_REDUMBER_16.jpg"
+        },
+        {
+          "src": "/reference/merit-sweater-red-umber/03.jpg",
+          "source": "https://www.shopdoen.com/cdn/shop/files/MERITSWEATER_REDUMBER_11.jpg",
+          "filename": "MERITSWEATER_REDUMBER_11.jpg"
+        },
+        {
+          "src": "/reference/merit-sweater-red-umber/04.jpg",
+          "source": "https://www.shopdoen.com/cdn/shop/files/MERITSWEATER_REDUMBER_17.jpg",
+          "filename": "MERITSWEATER_REDUMBER_17.jpg"
+        },
+        {
+          "src": "/reference/merit-sweater-red-umber/05.jpg",
+          "source": "https://www.shopdoen.com/cdn/shop/files/MERITSWEATER_REDUMBER_12.jpg",
+          "filename": "MERITSWEATER_REDUMBER_12.jpg"
+        },
+        {
+          "src": "/reference/merit-sweater-red-umber/06.png",
+          "source": "https://www.shopdoen.com/cdn/shop/files/MERIT_SWEATER_-_RED_UMBER_CLEARFLAT.png",
+          "filename": "MERIT_SWEATER_-_RED_UMBER_CLEARFLAT.png"
+        }
+      ],
+      "variants": [
+        {
+          "id": "42200885362801",
+          "label": "XS",
+          "price": 49800,
+          "referenceSku": "1744-4116-300-DRD-XS"
+        },
+        {
+          "id": "42200885395569",
+          "label": "S",
+          "price": 49800,
+          "referenceSku": "1744-4116-300-DRD-S"
+        },
+        {
+          "id": "42200885428337",
+          "label": "M",
+          "price": 49800,
+          "referenceSku": "1744-4116-300-DRD-M"
+        },
+        {
+          "id": "42200885461105",
+          "label": "L",
+          "price": 49800,
+          "referenceSku": "1744-4116-300-DRD-L"
+        },
+        {
+          "id": "42200885493873",
+          "label": "XL",
+          "price": 49800,
+          "referenceSku": "1744-4116-300-DRD-XL"
+        }
+      ],
+      "rights": "Reference photograph and copy from public HTML. Not cleared for Prism & Pollen. Stock unknown.",
+      "availability": "unverified"
+    },
+    {
+      "handle": "lavon-linen-pant-salt",
+      "title": "Lavon Linen Pant",
+      "pageTitle": "Lavon Linen Pant - Salt",
+      "color": "Salt",
+      "category": "Pants",
+      "kind": "apparel",
+      "sourceUrl": "https://www.shopdoen.com/products/lavon-linen-pant-salt",
+      "description": "A favorite of our co-founders, Margaret and Katherine, the Lavon Linen Pant is an effortless pull-on style, reimagined in soft, midweight linen with a relaxed leg for Summer.",
+      "imageNote": "Public og:image is a Monttee frame. Stored files are the Lavon frames from the same public HTML.",
+      "images": [
+        {
+          "src": "/reference/lavon-linen-pant-salt/01.jpg",
+          "source": "https://www.shopdoen.com/cdn/shop/files/LAVONLINENPANT_SALT_02_b7adae6c-0a0a-42d5-a002-156e5d784269.jpg",
+          "filename": "LAVONLINENPANT_SALT_02_b7adae6c-0a0a-42d5-a002-156e5d784269.jpg"
+        },
+        {
+          "src": "/reference/lavon-linen-pant-salt/02.jpg",
+          "source": "https://www.shopdoen.com/cdn/shop/files/LAVONLINENPANT_SALT_03_1dfce51b-3b5c-48d3-8d00-c775f5c36417.jpg",
+          "filename": "LAVONLINENPANT_SALT_03_1dfce51b-3b5c-48d3-8d00-c775f5c36417.jpg"
+        },
+        {
+          "src": "/reference/lavon-linen-pant-salt/03.png",
+          "source": "https://www.shopdoen.com/cdn/shop/files/LAVON_LINEN_PANT_-_SALT_CLEARFLAT.png",
+          "filename": "LAVON_LINEN_PANT_-_SALT_CLEARFLAT.png"
+        }
+      ],
+      "variants": [
+        {
+          "id": "40448036765809",
+          "label": "XXS",
+          "price": 19800,
+          "referenceSku": "1239-3134-100-WH-XXS"
+        },
+        {
+          "id": "40445893181553",
+          "label": "XS",
+          "price": 19800,
+          "referenceSku": "1239-3134-100-WH-XS"
+        },
+        {
+          "id": "40445893214321",
+          "label": "S",
+          "price": 19800,
+          "referenceSku": "1239-3134-100-WH-S"
+        },
+        {
+          "id": "40445893247089",
+          "label": "M",
+          "price": 19800,
+          "referenceSku": "1239-3134-100-WH-M"
+        },
+        {
+          "id": "40445893279857",
+          "label": "L",
+          "price": 19800,
+          "referenceSku": "1239-3134-100-WH-L"
+        },
+        {
+          "id": "40445893312625",
+          "label": "XL",
+          "price": 19800,
+          "referenceSku": "1239-3134-100-WH-XL"
+        },
+        {
+          "id": "40448036798577",
+          "label": "XXL",
+          "price": 19800,
+          "referenceSku": "1239-3134-100-WH-XXL"
+        }
+      ],
+      "rights": "Reference photograph and copy from public HTML. Not cleared for Prism & Pollen. Stock unknown.",
+      "availability": "unverified"
+    },
+    {
+      "handle": "diana-mid-rise-jean-marville-wash",
+      "title": "Diana Mid Rise Jean",
+      "pageTitle": "Diana Mid Rise Jean - Marville Wash",
+      "color": "Marville Wash",
+      "category": "Denim",
+      "kind": "apparel",
+      "sourceUrl": "https://www.shopdoen.com/products/diana-mid-rise-jean-marville-wash",
+      "description": "Inspired by our favorite vintage denim and crafted from 100% regenerative cotton, the Diana Mid Rise Jean offers a slightly lower rise than our original Diana, with the same straight-leg silhouette and thoughtful details you love.",
+      "imageNote": "Gallery order is the order found in public HTML. It was not visually checked against the live page.",
+      "images": [
+        {
+          "src": "/reference/diana-mid-rise-jean-marville-wash/01.jpg",
+          "source": "https://www.shopdoen.com/cdn/shop/files/DIANAMIDRISEJEAN_MARVILLEWASH_10.jpg",
+          "filename": "DIANAMIDRISEJEAN_MARVILLEWASH_10.jpg"
+        },
+        {
+          "src": "/reference/diana-mid-rise-jean-marville-wash/02.jpg",
+          "source": "https://www.shopdoen.com/cdn/shop/files/DIANAMIDRISEJEAN_MARVILLEWASH_15.jpg",
+          "filename": "DIANAMIDRISEJEAN_MARVILLEWASH_15.jpg"
+        },
+        {
+          "src": "/reference/diana-mid-rise-jean-marville-wash/03.jpg",
+          "source": "https://www.shopdoen.com/cdn/shop/files/DIANAMIDRISEJEAN_MARVILLEWASH_13.jpg",
+          "filename": "DIANAMIDRISEJEAN_MARVILLEWASH_13.jpg"
+        },
+        {
+          "src": "/reference/diana-mid-rise-jean-marville-wash/04.jpg",
+          "source": "https://www.shopdoen.com/cdn/shop/files/DIANAMIDRISEJEAN_MARVILLEWASH_09.jpg",
+          "filename": "DIANAMIDRISEJEAN_MARVILLEWASH_09.jpg"
+        },
+        {
+          "src": "/reference/diana-mid-rise-jean-marville-wash/05.jpg",
+          "source": "https://www.shopdoen.com/cdn/shop/files/DIANAMIDRISEJEAN_MARVILLEWASH_14.jpg",
+          "filename": "DIANAMIDRISEJEAN_MARVILLEWASH_14.jpg"
+        },
+        {
+          "src": "/reference/diana-mid-rise-jean-marville-wash/06.jpg",
+          "source": "https://www.shopdoen.com/cdn/shop/files/DIANAMIDRISEJEAN_MARVILLEWASH_08.jpg",
+          "filename": "DIANAMIDRISEJEAN_MARVILLEWASH_08.jpg"
+        },
+        {
+          "src": "/reference/diana-mid-rise-jean-marville-wash/07.png",
+          "source": "https://www.shopdoen.com/cdn/shop/files/DIANA_MID_RISE_JEAN_-_MARVILLE_WASH_CLEARFLAT.png",
+          "filename": "DIANA_MID_RISE_JEAN_-_MARVILLE_WASH_CLEARFLAT.png"
+        }
+      ],
+      "variants": [
+        {
+          "id": "42243996254321",
+          "label": "23",
+          "price": 24800,
+          "referenceSku": "3517-3265-100-BL-23"
+        },
+        {
+          "id": "42243996287089",
+          "label": "24",
+          "price": 24800,
+          "referenceSku": "3517-3265-100-BL-24"
+        },
+        {
+          "id": "42243996319857",
+          "label": "25",
+          "price": 24800,
+          "referenceSku": "3517-3265-100-BL-25"
+        },
+        {
+          "id": "42243996352625",
+          "label": "26",
+          "price": 24800,
+          "referenceSku": "3517-3265-100-BL-26"
+        },
+        {
+          "id": "42243996385393",
+          "label": "27",
+          "price": 24800,
+          "referenceSku": "3517-3265-100-BL-27"
+        },
+        {
+          "id": "42243996418161",
+          "label": "28",
+          "price": 24800,
+          "referenceSku": "3517-3265-100-BL-28"
+        },
+        {
+          "id": "42243996450929",
+          "label": "29",
+          "price": 24800,
+          "referenceSku": "3517-3265-100-BL-29"
+        },
+        {
+          "id": "42243996483697",
+          "label": "30",
+          "price": 24800,
+          "referenceSku": "3517-3265-100-BL-30"
+        },
+        {
+          "id": "42243996516465",
+          "label": "31",
+          "price": 24800,
+          "referenceSku": "3517-3265-100-BL-31"
+        },
+        {
+          "id": "42243996549233",
+          "label": "32",
+          "price": 24800,
+          "referenceSku": "3517-3265-100-BL-32"
+        },
+        {
+          "id": "42243996582001",
+          "label": "33",
+          "price": 24800,
+          "referenceSku": "3517-3265-100-BL-33"
+        },
+        {
+          "id": "42243996614769",
+          "label": "34",
+          "price": 24800,
+          "referenceSku": "3517-3265-100-BL-34"
+        }
+      ],
+      "rights": "Reference photograph and copy from public HTML. Not cleared for Prism & Pollen. Stock unknown.",
+      "availability": "unverified"
+    },
+    {
+      "handle": "germain-coat-light-khaki",
+      "title": "Germain Coat",
+      "pageTitle": "Germain Coat - Light Khaki",
+      "color": "Light Khaki",
+      "category": "Outerwear",
+      "kind": "apparel",
+      "sourceUrl": "https://www.shopdoen.com/products/germain-coat-light-khaki",
+      "description": "Rendered in a double-faced wool-blend for cozy weight and drape, our Germain Coat features a slightly boxy fit designed for layering.",
+      "imageNote": "Gallery order is the order found in public HTML. It was not visually checked against the live page.",
+      "images": [
+        {
+          "src": "/reference/germain-coat-light-khaki/01.jpg",
+          "source": "https://www.shopdoen.com/cdn/shop/files/GERMAINCOAT_LIGHTKHAKI_21.jpg",
+          "filename": "GERMAINCOAT_LIGHTKHAKI_21.jpg"
+        },
+        {
+          "src": "/reference/germain-coat-light-khaki/02.jpg",
+          "source": "https://www.shopdoen.com/cdn/shop/files/GERMAINCOAT_LIGHTKHAKI_27.jpg",
+          "filename": "GERMAINCOAT_LIGHTKHAKI_27.jpg"
+        },
+        {
+          "src": "/reference/germain-coat-light-khaki/03.jpg",
+          "source": "https://www.shopdoen.com/cdn/shop/files/GERMAINCOAT_LIGHTKHAKI_19.jpg",
+          "filename": "GERMAINCOAT_LIGHTKHAKI_19.jpg"
+        },
+        {
+          "src": "/reference/germain-coat-light-khaki/04.jpg",
+          "source": "https://www.shopdoen.com/cdn/shop/files/GERMAINCOAT_LIGHTKHAKI_17.jpg",
+          "filename": "GERMAINCOAT_LIGHTKHAKI_17.jpg"
+        },
+        {
+          "src": "/reference/germain-coat-light-khaki/05.jpg",
+          "source": "https://www.shopdoen.com/cdn/shop/files/GERMAINCOAT_LIGHTKHAKI_20.jpg",
+          "filename": "GERMAINCOAT_LIGHTKHAKI_20.jpg"
+        },
+        {
+          "src": "/reference/germain-coat-light-khaki/06.jpg",
+          "source": "https://www.shopdoen.com/cdn/shop/files/GERMAIN-COAT_LIGHT-KHAKI_13.jpg",
+          "filename": "GERMAIN-COAT_LIGHT-KHAKI_13.jpg"
+        },
+        {
+          "src": "/reference/germain-coat-light-khaki/07.jpg",
+          "source": "https://www.shopdoen.com/cdn/shop/files/GERMAIN-COAT_LIGHT-KHAKI_11.jpg",
+          "filename": "GERMAIN-COAT_LIGHT-KHAKI_11.jpg"
+        },
+        {
+          "src": "/reference/germain-coat-light-khaki/08.png",
+          "source": "https://www.shopdoen.com/cdn/shop/files/GERMAIN_COAT_-_LIGHT_KHAKI_CLEARFLAT.png",
+          "filename": "GERMAIN_COAT_-_LIGHT_KHAKI_CLEARFLAT.png"
+        }
+      ],
+      "variants": [
+        {
+          "id": "42243995140209",
+          "label": "XS",
+          "price": 77800,
+          "referenceSku": "3514-5088S-100-LBR-XS"
+        },
+        {
+          "id": "42243995172977",
+          "label": "S",
+          "price": 77800,
+          "referenceSku": "3514-5088S-100-LBR-S"
+        },
+        {
+          "id": "42243995205745",
+          "label": "M",
+          "price": 77800,
+          "referenceSku": "3514-5088S-100-LBR-M"
+        },
+        {
+          "id": "42243995238513",
+          "label": "L",
+          "price": 77800,
+          "referenceSku": "3514-5088S-100-LBR-L"
+        },
+        {
+          "id": "42243995271281",
+          "label": "XL",
+          "price": 77800,
+          "referenceSku": "3514-5088S-100-LBR-XL"
+        }
+      ],
+      "rights": "Reference photograph and copy from public HTML. Not cleared for Prism & Pollen. Stock unknown.",
+      "availability": "unverified"
+    },
+    {
+      "handle": "devi-boot-black-stretch-suede",
+      "title": "Devi Boot",
+      "pageTitle": "Devi Boot - Black Stretch Suede",
+      "color": "Black Stretch Suede",
+      "category": "Shoes",
+      "kind": "apparel",
+      "sourceUrl": "https://www.shopdoen.com/products/devi-boot-black-stretch-suede",
+      "description": "Nodding to classic Western styles, the Devi Boot is made from supple stretch suede.",
+      "imageNote": "Gallery order is the order found in public HTML. It was not visually checked against the live page.",
+      "images": [
+        {
+          "src": "/reference/devi-boot-black-stretch-suede/01.jpg",
+          "source": "https://www.shopdoen.com/cdn/shop/files/DEVIBOOT_BLACKSTRETCHSUEDE_02.jpg",
+          "filename": "DEVIBOOT_BLACKSTRETCHSUEDE_02.jpg"
+        },
+        {
+          "src": "/reference/devi-boot-black-stretch-suede/02.jpg",
+          "source": "https://www.shopdoen.com/cdn/shop/files/DEVIBOOT_BLACKSTRETCHSUEDE_05.jpg",
+          "filename": "DEVIBOOT_BLACKSTRETCHSUEDE_05.jpg"
+        },
+        {
+          "src": "/reference/devi-boot-black-stretch-suede/03.jpg",
+          "source": "https://www.shopdoen.com/cdn/shop/files/DEVIBOOT_BLACKSTRETCHSUEDE_04.jpg",
+          "filename": "DEVIBOOT_BLACKSTRETCHSUEDE_04.jpg"
+        },
+        {
+          "src": "/reference/devi-boot-black-stretch-suede/04.jpg",
+          "source": "https://www.shopdoen.com/cdn/shop/files/DEVIBOOT_BLACKSTRETCHSUEDE_03.jpg",
+          "filename": "DEVIBOOT_BLACKSTRETCHSUEDE_03.jpg"
+        },
+        {
+          "src": "/reference/devi-boot-black-stretch-suede/05.png",
+          "source": "https://www.shopdoen.com/cdn/shop/files/DEVI_BOOT_-_BLACK_STRETCH_SUEDE_CLEARFLAT.png",
+          "filename": "DEVI_BOOT_-_BLACK_STRETCH_SUEDE_CLEARFLAT.png"
+        }
+      ],
+      "variants": [
+        {
+          "id": "43006834770033",
+          "label": "35",
+          "price": 49800,
+          "referenceSku": "FWR-2018-100-BK-35"
+        },
+        {
+          "id": "43006834802801",
+          "label": "35.5",
+          "price": 49800,
+          "referenceSku": "FWR-2018-100-BK-35.5"
+        },
+        {
+          "id": "43006834835569",
+          "label": "36",
+          "price": 49800,
+          "referenceSku": "FWR-2018-100-BK-36"
+        },
+        {
+          "id": "43006834868337",
+          "label": "36.5",
+          "price": 49800,
+          "referenceSku": "FWR-2018-100-BK-36.5"
+        },
+        {
+          "id": "43006834901105",
+          "label": "37",
+          "price": 49800,
+          "referenceSku": "FWR-2018-100-BK-37"
+        },
+        {
+          "id": "43006834933873",
+          "label": "37.5",
+          "price": 49800,
+          "referenceSku": "FWR-2018-100-BK-37.5"
+        },
+        {
+          "id": "43006834966641",
+          "label": "38",
+          "price": 49800,
+          "referenceSku": "FWR-2018-100-BK-38"
+        },
+        {
+          "id": "43006834999409",
+          "label": "38.5",
+          "price": 49800,
+          "referenceSku": "FWR-2018-100-BK-38.5"
+        },
+        {
+          "id": "43006835032177",
+          "label": "39",
+          "price": 49800,
+          "referenceSku": "FWR-2018-100-BK-39"
+        },
+        {
+          "id": "43006835064945",
+          "label": "39.5",
+          "price": 49800,
+          "referenceSku": "FWR-2018-100-BK-39.5"
+        },
+        {
+          "id": "43006835097713",
+          "label": "40",
+          "price": 49800,
+          "referenceSku": "FWR-2018-100-BK-40"
+        },
+        {
+          "id": "43006835130481",
+          "label": "40.5",
+          "price": 49800,
+          "referenceSku": "FWR-2018-100-BK-40.5"
+        },
+        {
+          "id": "43006835163249",
+          "label": "41",
+          "price": 49800,
+          "referenceSku": "FWR-2018-100-BK-41"
+        }
+      ],
+      "rights": "Reference photograph and copy from public HTML. Not cleared for Prism & Pollen. Stock unknown.",
+      "availability": "unverified"
+    },
+    {
+      "handle": "balfour-beaded-bag-champagne",
+      "title": "Balfour Beaded Bag",
+      "pageTitle": "Balfour Beaded Bag - Flan Beads",
+      "color": "Champagne",
+      "category": "Bags",
+      "kind": "apparel",
+      "sourceUrl": "https://www.shopdoen.com/products/balfour-beaded-bag-champagne",
+      "description": "Hand-beaded in India, the D\u00d4EN Heirloom Balfour Bag draws inspiration from the sparkling pochettes of the 1920s.",
+      "imageNote": "Page title says Flan Beads. Variant option says Champagne.",
+      "images": [
+        {
+          "src": "/reference/balfour-beaded-bag-champagne/01.jpg",
+          "source": "https://www.shopdoen.com/cdn/shop/files/BALFOURBAG_CHAMPAGNE_01.jpg",
+          "filename": "BALFOURBAG_CHAMPAGNE_01.jpg"
+        },
+        {
+          "src": "/reference/balfour-beaded-bag-champagne/02.jpg",
+          "source": "https://www.shopdoen.com/cdn/shop/files/BALFOURBAG_CHAMPAGNE_02.jpg",
+          "filename": "BALFOURBAG_CHAMPAGNE_02.jpg"
+        },
+        {
+          "src": "/reference/balfour-beaded-bag-champagne/03.jpg",
+          "source": "https://www.shopdoen.com/cdn/shop/files/BALFOURBAG_CHAMPAGNE_07.jpg",
+          "filename": "BALFOURBAG_CHAMPAGNE_07.jpg"
+        },
+        {
+          "src": "/reference/balfour-beaded-bag-champagne/04.png",
+          "source": "https://www.shopdoen.com/cdn/shop/files/BALFOUR_BAG_-_CHAMPAGNE_CLEARFLAT.png",
+          "filename": "BALFOUR_BAG_-_CHAMPAGNE_CLEARFLAT.png"
+        }
+      ],
+      "variants": [
+        {
+          "id": "42305409056881",
+          "label": "One size",
+          "price": 32800,
+          "referenceSku": "BAG-1054-100-LYE-OS"
+        }
+      ],
+      "rights": "Reference photograph and copy from public HTML. Not cleared for Prism & Pollen. Stock unknown.",
+      "availability": "unverified"
+    },
+    {
+      "handle": "long-scoop-neck-slip-conch-2",
+      "title": "Long Scoop Neck Slip",
+      "pageTitle": "Long Scoop Neck Slip - Conch",
+      "color": "Conch",
+      "category": "Slips",
+      "kind": "apparel",
+      "sourceUrl": "https://www.shopdoen.com/products/long-scoop-neck-slip-conch-2",
+      "description": "In 100% viscose, the D\u00d4EN Long Scoop Neck Slip is the perfect extra-thin layer for any skirt or dress where you\u2019d like a little more coverage.",
+      "imageNote": "Filenames say Slip, not Conch. They are the images on this product's public page, including its og:image. Gallery order is the HTML order and was not visually checked.",
+      "images": [
+        {
+          "src": "/reference/long-scoop-neck-slip-conch-2/01.jpg",
+          "source": "https://www.shopdoen.com/cdn/shop/products/DOEN-FALL20-2-Slip-0125_fe74a4ef-4de9-439a-85b0-c7fe96597ff2.jpg",
+          "filename": "DOEN-FALL20-2-Slip-0125_fe74a4ef-4de9-439a-85b0-c7fe96597ff2.jpg"
+        },
+        {
+          "src": "/reference/long-scoop-neck-slip-conch-2/02.jpg",
+          "source": "https://www.shopdoen.com/cdn/shop/products/DOEN-FALL20-2-Slip-0127_08665a96-8021-4b98-a8ce-d2a5ce0271e3.jpg",
+          "filename": "DOEN-FALL20-2-Slip-0127_08665a96-8021-4b98-a8ce-d2a5ce0271e3.jpg"
+        },
+        {
+          "src": "/reference/long-scoop-neck-slip-conch-2/03.jpg",
+          "source": "https://www.shopdoen.com/cdn/shop/products/DOEN-FALL20-2-Slip-0130_f056c2e5-e787-491d-9421-e7adf23e7fd2.jpg",
+          "filename": "DOEN-FALL20-2-Slip-0130_f056c2e5-e787-491d-9421-e7adf23e7fd2.jpg"
+        },
+        {
+          "src": "/reference/long-scoop-neck-slip-conch-2/04.jpg",
+          "source": "https://www.shopdoen.com/cdn/shop/products/DOEN-FALL20-2-Slip-0132_5da7e30b-d057-4222-831d-52bfed0aa1b4.jpg",
+          "filename": "DOEN-FALL20-2-Slip-0132_5da7e30b-d057-4222-831d-52bfed0aa1b4.jpg"
+        },
+        {
+          "src": "/reference/long-scoop-neck-slip-conch-2/05.png",
+          "source": "https://www.shopdoen.com/cdn/shop/files/LONG_SCOOP_NECK_SLIP_-_CONCH_CLEARFLAT.png",
+          "filename": "LONG_SCOOP_NECK_SLIP_-_CONCH_CLEARFLAT.png"
+        }
+      ],
+      "variants": [
+        {
+          "id": "42685976543345",
+          "label": "XXS",
+          "price": 6800,
+          "referenceSku": "5805-2623-100-NE-XXS"
+        },
+        {
+          "id": "42685976576113",
+          "label": "XS",
+          "price": 6800,
+          "referenceSku": "5805-2623-100-NE-XS"
+        },
+        {
+          "id": "42685976608881",
+          "label": "S",
+          "price": 6800,
+          "referenceSku": "5805-2623-100-NE-S"
+        },
+        {
+          "id": "42685976641649",
+          "label": "M",
+          "price": 6800,
+          "referenceSku": "5805-2623-100-NE-M"
+        },
+        {
+          "id": "42685976674417",
+          "label": "L",
+          "price": 6800,
+          "referenceSku": "5805-2623-100-NE-L"
+        },
+        {
+          "id": "42685976707185",
+          "label": "XL",
+          "price": 6800,
+          "referenceSku": "5805-2623-100-NE-XL"
+        },
+        {
+          "id": "42685976739953",
+          "label": "XXL",
+          "price": 6800,
+          "referenceSku": "5805-2623-100-NE-XXL"
+        }
+      ],
+      "rights": "Reference photograph and copy from public HTML. Not cleared for Prism & Pollen. Stock unknown.",
+      "availability": "unverified"
+    },
+    {
+      "handle": "digital-gift-card",
+      "title": "Digital Gift Card",
+      "pageTitle": "Digital Gift Card",
+      "color": "",
+      "category": "Gift card",
+      "kind": "gift-card",
+      "sourceUrl": "https://www.shopdoen.com/products/digital-gift-card",
+      "description": "Digital gift cards include an option for scheduling and contain instructions to redeem them on our website. You can opt to receive the gift card via email after you've completed your purchase; from there you can forward it to the recipient or print it out for hand delivery. Our gift cards never expire. \u00a0",
+      "imageNote": "Gallery order is the order found in public HTML. It was not visually checked against the live page.",
+      "images": [
+        {
+          "src": "/reference/digital-gift-card/01.jpg",
+          "source": "https://www.shopdoen.com/cdn/shop/files/GIFT_CARD_IMAGE_HOLIDAY_1_2026_V3.jpg",
+          "filename": "GIFT_CARD_IMAGE_HOLIDAY_1_2026_V3.jpg"
+        }
+      ],
+      "variants": [
+        {
+          "id": "39398473302129",
+          "label": "$50",
+          "price": 5000,
+          "referenceSku": "RISEGC-2021-50"
+        },
+        {
+          "id": "39398473334897",
+          "label": "$100",
+          "price": 10000,
+          "referenceSku": "RISEGC-2021-100"
+        },
+        {
+          "id": "39398473367665",
+          "label": "$150",
+          "price": 15000,
+          "referenceSku": "RISEGC-2021-150"
+        },
+        {
+          "id": "39398473400433",
+          "label": "$200",
+          "price": 20000,
+          "referenceSku": "RISEGC-2021-200"
+        },
+        {
+          "id": "39398473433201",
+          "label": "$250",
+          "price": 25000,
+          "referenceSku": "RISEGC-2021-250"
+        },
+        {
+          "id": "39628955648113",
+          "label": "$300",
+          "price": 30000,
+          "referenceSku": "RISEGC-2021-300"
+        },
+        {
+          "id": "39745986920561",
+          "label": "$350",
+          "price": 35000,
+          "referenceSku": "RISEGC-2021-350"
+        },
+        {
+          "id": "39398473465969",
+          "label": "$500",
+          "price": 50000,
+          "referenceSku": "RISEGC-2021-500"
+        },
+        {
+          "id": "39398473498737",
+          "label": "$750",
+          "price": 75000,
+          "referenceSku": "RISEGC-2021-750"
+        },
+        {
+          "id": "39398473531505",
+          "label": "$1000",
+          "price": 100000,
+          "referenceSku": "RISEGC-2021-1000"
+        }
+      ],
+      "rights": "Reference photograph and copy from public HTML. Not cleared for Prism & Pollen. Stock unknown.",
+      "availability": "unverified"
+    }
+  ]
+}

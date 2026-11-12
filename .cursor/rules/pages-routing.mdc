@@ -1,0 +1,11 @@
+---
+description: File-based routes for the Prism & Pollen preview.
+globs:
+  - src/pages/**
+---
+
+# Pages
+
+- Shell is `src/components/Base.astro`.
+- Representative families: `/`, `/collections/[handle]`, `/products/[handle]`, `/search`, `/cart`, `/journal`, `/journal/[slug]`, `/pages/[slug]`, `/pages/shops`, `/pages/shops/[slug]`, `404`.
+- Do not add a remote form action or a checkout endpoint.

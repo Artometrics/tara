@@ -1,0 +1,256 @@
+---
+import Base from "../../components/Base.astro";
+import Ornament from "../../components/Ornament.astro";
+import ProductCard from "../../components/ProductCard.astro";
+import { formatUSD } from "../../lib/money";
+import { products, relatedProducts, type Product } from "../../data/catalog";
+
+export function getStaticPaths() {
+  return products.map((product) => ({
+    params: { handle: product.handle },
+    props: { product },
+  }));
+}
+
+interface Props {
+  product: Product;
+}
+
+const { product } = Astro.props;
+const price = Math.min(...product.variants.map((variant) => variant.price));
+const related = relatedProducts(product.handle);
+const gift = product.kind === "gift-card";
+---
+
+<Base title={product.title} description={product.description}>
+  <article class="pdp">
+    <div class="pdp-gallery">
+      {
+        product.images.map((image, index) => (
+          <img
+            class:list={["pdp-slide", { "is-active": index === 0 }]}
+            src={image.src}
+            alt={index === 0 ? product.imageAlt : ""}
+          />
+        ))
+      }
+    </div>
+    <div class="pdp-info">
+      <h1>{product.title}</h1>
+      <Ornament />
+      {product.color ? <p class="quiet">in {product.color}</p> : null}
+      <div class="swatches" aria-label="Colors in this catalog">
+        <span class="swatch is-selected" title={product.color || "Color"} style="background:#e4d3bc"></span>
+      </div>
+      <p class="sr-only">Only the recorded colorway is shown. No other color was in the handoff.</p>
+      <p data-pdp-price>{gift ? `From ${formatUSD(price)}` : formatUSD(price)}</p>
+      <form id="add-form" data-handle={product.handle} data-kind={product.kind}>
+        <div class="size-list" data-size-group tabindex="-1" role="group" aria-label={gift ? "Amount" : "Size"}>
+          {
+            product.variants.map((variant, index) => (
+              <>
+                {index > 0 ? <span class="dot" aria-hidden="true">·</span> : null}
+                <button
+                  class:list={["size-option", { "is-unavailable": variant.unavailable }]}
+                  type="button"
+                  data-variant-id={variant.id}
+                  aria-pressed="false"
+                  disabled={variant.unavailable}
+                  title={variant.unavailable ? "Unavailable in the desktop capture. Not live stock." : undefined}
+                >
+                  {variant.label}
+                </button>
+              </>
+            ))
+          }
+        </div>
+        <p id="size-error" class="alert" role="alert" hidden></p>
+        {
+          gift ? (
+            <p class="quiet">Gift card issuance is off. Choosing an amount does not create a note.</p>
+            <button class="orn-btn" id="add-to-cart" type="button" disabled>
+              <i class="gem a"></i><i class="gem b"></i><i class="gem c"></i><i class="gem d"></i>
+              Issuance off
+            </button>
+          ) : (
+            <button class="orn-btn" id="add-to-cart" type="submit">
+              <i class="gem a"></i><i class="gem b"></i><i class="gem c"></i><i class="gem d"></i>
+              <span id="add-label">Select size</span>
+            </button>
+          )
+        }
+        <p class="quiet">From $25.09/mo or 0% APR</p>
+        <p><button type="button" id="pay-note" class="linkish">Learn more</button></p>
+        <p id="pay-note-copy" class="quiet" hidden>That monthly line is a reference observation. Payments are off. It is not an offer.</p>
+      </form>
+      <div class="tabs" role="tablist" aria-label="Product notes">
+        <button type="button" role="tab" data-tab="description" aria-selected="true">Description</button>
+        <span aria-hidden="true">·</span>
+        <button type="button" role="tab" data-tab="details" aria-selected="false">Details</button>
+        <span aria-hidden="true">·</span>
+        <button type="button" role="tab" data-tab="fit" aria-selected="false">Size &amp; fit</button>
+      </div>
+      <div class="panel" data-panel="description" role="tabpanel">
+        <p>{product.description}</p>
+        <p class="sr-only">This sentence is public reference copy. Reviews are off.</p>
+      </div>
+      <div class="panel" data-panel="details" role="tabpanel" hidden>
+        {
+          product.handle === "quinn-dress-salt" ? (
+            <>
+              <p class="caps">Country of origin</p>
+              <p>Made in India</p>
+              <p class="caps">Fabric content</p>
+              <p>100% Organic Cotton</p>
+              <p class="sheer-scale"><i class="is-on"></i><i></i><i></i><i></i><i></i><span>Sheer</span><span>Opaque</span></p>
+              <p class="caps">Care instructions</p>
+              <p>Hand Wash Cold. Do Not Bleach. Lay Flat To Dry. Low Iron. Or Dry Clean</p>
+            </>
+          ) : (
+            <>
+              <p>Public page title: {product.pageTitle}.</p>
+              <p>Care instructions were captured for the Quinn dress only. None are invented here.</p>
+              <p>Availability was not in the handoff. Stock and fulfillment are off.</p>
+              {product.pageTitle.includes("Flan") ? <p>The public title says Flan Beads. The variant option says Champagne.</p> : null}
+            </>
+          )
+        }
+      </div>
+      <div class="panel" data-panel="fit" role="tabpanel" hidden>
+        {
+          product.handle === "quinn-dress-salt" ? (
+            <>
+              <p class="caps">Model</p>
+              <p>Alex is 5'8 and wears the size XS. Alana is 5'7 and wears the size XL.</p>
+              <p class="caps">Measurements</p>
+              <button type="button" id="open-size-guide">Click here for size guide</button>
+              <p class="quiet">XXS was unavailable in the desktop capture. That is not live stock.</p>
+            </>
+          ) : (
+            <p>A size guide was not captured for this piece. No measurements are invented.</p>
+          )
+        }
+      </div>
+      {
+        product.handle === "quinn-dress-salt" ? (
+          <dialog id="size-guide" aria-labelledby="guide-title">
+            <button type="button" data-close aria-label="Close size guide">×</button>
+            <h2 id="guide-title" class="caps">Quinn Dress</h2>
+            <p>Salt</p>
+            <div class="tabs">
+              <button type="button" data-guide-tab="body" aria-pressed="true">Body</button>
+              <button type="button" data-guide-tab="garment" aria-pressed="false">Garment</button>
+              <button type="button" data-guide-tab="conversion" aria-pressed="false">Conversion</button>
+            </div>
+            <div data-guide-panel="body">
+              <div class="guide-scroll">
+                <table class="guide-table">
+                  <thead><tr><th>US size</th><th>US size</th><th>Bust</th><th>Waist</th><th>Hips</th></tr></thead>
+                  <tbody>
+                    <tr><td>00</td><td>XXS</td><td data-cm="77.5–80">30.5–31.5</td><td>23–24</td><td>34–35</td></tr>
+                    <tr><td>0</td><td>XS</td><td data-cm="82.5">32.5</td><td>25</td><td>36</td></tr>
+                    <tr><td>2</td><td>S</td><td data-cm="85.1">33.5</td><td>26</td><td>37</td></tr>
+                    <tr><td>4</td><td>S</td><td data-cm="87.6">34.5</td><td>27</td><td>38</td></tr>
+                    <tr><td>6</td><td>M</td><td data-cm="90.2">35.5</td><td>28</td><td>39</td></tr>
+                    <tr><td>8</td><td>M</td><td data-cm="92.7">36.5</td><td>29</td><td>40</td></tr>
+                    <tr><td>10</td><td>L</td><td data-cm="97.8–99.1">38.5–39</td><td>31–31.5</td><td>42–42.5</td></tr>
+                    <tr><td>12</td><td>XL</td><td data-cm="104–105">41–41.5</td><td>33.5–34</td><td>44.5–45</td></tr>
+                    <tr><td>14</td><td>XL</td><td data-cm="109">43</td><td>35.5</td><td>46.5</td></tr>
+                    <tr><td>16</td><td>XXL</td><td data-cm="114–116">45–45.5</td><td>37.5–38</td><td>48.5–49</td></tr>
+                  </tbody>
+                </table>
+              </div>
+              <p><button type="button" id="unit-toggle" aria-pressed="false">in | cm</button></p>
+              <h3 class="caps">How to measure</h3>
+              <p>We recommend measuring yourself with a soft tape measure, keeping it parallel to the floor and gently relaxed.</p>
+              <ul>
+                <li>Bust: around the fullest part of your chest</li>
+                <li>Waist: around the narrowest part of your midsection</li>
+                <li>Hip: around the fullest part of your hips and seat</li>
+              </ul>
+              <p>This guide serves as a helpful starting point for selecting your size. Due to the individuality of each silhouette, exact measurements may vary.</p>
+              <p class="quiet">Quinn Dress only. Bust centimeters are the captured table. Waist and hip centimeters were off-screen, so those cells stay in the captured inches. Not a Prism &amp; Pollen fit promise.</p>
+            </div>
+            <div data-guide-panel="garment" hidden>
+              <div class="guide-scroll">
+                <table class="guide-table">
+                  <thead><tr><th>Size</th><th>Bust (extended)</th><th>Waist</th></tr></thead>
+                  <tbody>
+                    <tr><td>XXS</td><td>49</td><td>20</td></tr>
+                    <tr><td>XS</td><td>51</td><td>22</td></tr>
+                    <tr><td>S</td><td>53</td><td>24</td></tr>
+                    <tr><td>M</td><td>55</td><td>26</td></tr>
+                    <tr><td>L</td><td>57</td><td>28</td></tr>
+                    <tr><td>XL</td><td>60</td><td>31</td></tr>
+                    <tr><td>XXL</td><td>64</td><td>35</td></tr>
+                  </tbody>
+                </table>
+              </div>
+              <p>We find it helpful to compare product measurements against something you already wear and love. Lay it flat on a smooth surface, measure straight across at the bust, waist, and hips, and multiply each by two for the full circumference. Use those numbers alongside the measurements listed above to find your best fit.</p>
+              <p class="quiet">The waist heading was cut off in the capture, so the column is labeled Waist. Further garment columns and centimeter values were not visible.</p>
+            </div>
+            <div data-guide-panel="conversion" hidden>
+              <div class="guide-scroll">
+                <table class="guide-table">
+                  <thead><tr><th>USA</th><th>USA</th><th>UK</th><th>AUS</th><th>France</th><th>Italy</th><th>Japan</th></tr></thead>
+                  <tbody>
+                    <tr><td>XXS</td><td>00</td><td>4</td><td>4</td><td>30</td><td>34</td><td>1/3</td></tr>
+                    <tr><td>XS</td><td>0</td><td>4/6</td><td>4/6</td><td>32</td><td>36</td><td>3/5</td></tr>
+                    <tr><td>S</td><td>2</td><td>6</td><td>6</td><td>34</td><td>38</td><td>5/7</td></tr>
+                    <tr><td>S</td><td>4</td><td>8</td><td>8</td><td>36</td><td>40</td><td>7/9</td></tr>
+                    <tr><td>M</td><td>6</td><td>10</td><td>10</td><td>38</td><td>42</td><td>9/11</td></tr>
+                    <tr><td>M</td><td>8</td><td>12</td><td>12</td><td>40</td><td>44</td><td>11</td></tr>
+                    <tr><td>L</td><td>10</td><td>14</td><td>14</td><td>42</td><td>46</td><td>13</td></tr>
+                    <tr><td>XL</td><td>12</td><td>16</td><td>16</td><td>44</td><td>48</td><td>13/15</td></tr>
+                    <tr><td>XL</td><td>14</td><td>18</td><td>18</td><td>46</td><td>50</td><td>15</td></tr>
+                    <tr><td>XXL</td><td>16</td><td>20</td><td>20</td><td>48</td><td>52</td><td>17/19</td></tr>
+                  </tbody>
+                </table>
+              </div>
+              <p class="quiet">Quinn Dress conversion only. Not applied to other pieces.</p>
+            </div>
+          </dialog>
+        ) : null
+      }
+    </div>
+  </article>
+  {
+    product.handle === "quinn-dress-salt" ? (
+      <section class="section" id="pdp-featured">
+        <h2 class="script">Featured</h2>
+        <div class="featured-row">
+          <article class="featured-card">
+            <div class="featured-photo">
+              <img src="/campaign/ISCHIA_DRESS_SALT.jpg" alt="Ischia Dress in salt. Reference photograph." />
+              <img class="featured-frame" src="/campaign/doen-frame-1.webp" alt="" />
+            </div>
+            <h3>Ischia Dress</h3>
+            <p>$348</p>
+            <p class="quiet">XXS · XS · S · M · L · XL · XXL</p>
+          </article>
+          <article class="featured-card">
+            <div class="featured-photo">
+              <img src="/campaign/ISCHIA_DRESS_BLACK.jpg" alt="Ischia Dress in black. Reference photograph." />
+              <img class="featured-frame" src="/campaign/doen-frame-2.webp" alt="" />
+            </div>
+            <h3>Ischia Dress</h3>
+            <p>$348</p>
+            <p class="quiet">XXS · XS · S · M · L · XL · XXL</p>
+          </article>
+        </div>
+        <p class="quiet">Shown under Quinn on the mobile capture. Not part of the twelve-product handoff. Selectable sizes beyond the visible row were not fully read.</p>
+      </section>
+    ) : related.length > 0 ? (
+      <section class="section">
+        <h2 class="script">Also in the preview</h2>
+      </section>
+      <div class="product-grid">
+        {related.map((item) => <ProductCard product={item} />)}
+      </div>
+    ) : null
+  }
+  <div class="sticky-buy" id="sticky-buy">
+    <button type="button" id="size-selector-jump">Size selector</button>
+    <button type="button" id="sticky-add">Add to cart</button>
+  </div>
+</Base>

@@ -1,0 +1,22 @@
+---
+import Base from "../components/Base.astro";
+---
+
+<Base title="Bag" description="A bag stored in this browser. Checkout is off.">
+  <header class="page-head">
+    <h1 class="script">Your bag</h1>
+    <p class="lede">Stored on this device only. It is not an order.</p>
+  </header>
+  <div class="prose" data-cart-root>
+    <p data-cart-empty>Your cart is empty</p>
+    <div data-cart-filled hidden>
+      <div data-cart-lines></div>
+    </div>
+    <p class="subtotal"><span>Subtotal</span> <span data-cart-subtotal>$0</span></p>
+      <button class="orn-btn" type="button" data-checkout disabled>
+        <i class="gem a"></i><i class="gem b"></i><i class="gem c"></i><i class="gem d"></i>
+        Checkout
+      </button>
+      <p class="quiet">Payments are off. This bag stays on this device and is not an order.</p>
+  </div>
+</Base>

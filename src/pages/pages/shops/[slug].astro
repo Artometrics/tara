@@ -1,0 +1,20 @@
+---
+import Base from "../../../components/Base.astro";
+
+export function getStaticPaths() {
+  return [{ params: { slug: "unpublished" } }];
+}
+
+const { slug } = Astro.params;
+---
+
+<Base title="Shop" description="No shop detail is published.">
+  <header class="page-head">
+    <p class="quiet"><a href="/pages/shops">Shops</a></p>
+    <h1 class="script">No shop here</h1>
+  </header>
+  <div class="prose">
+    <p>No shop detail is published for “{slug}”. No address, hours, or map is invented for it.</p>
+    <p><a href="/pages/shops">Back to shops</a></p>
+  </div>
+</Base>

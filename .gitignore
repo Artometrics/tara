@@ -3,9 +3,12 @@
 # dependencies
 node_modules/
 
-# Expo
-.expo/
+# Astro
+.astro/
 dist/
+
+# Expo leftovers
+.expo/
 .firebase/
 web-build/
 expo-env.d.ts
@@ -38,14 +41,5 @@ yarn-error.*
 
 app-example
 
-.env
-.env.example
-
-# env
-.env
-
 # Local Netlify folder
 .netlify
-
-# Design reference scrapes (never commit)
-reference/

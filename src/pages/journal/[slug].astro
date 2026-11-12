@@ -1,0 +1,35 @@
+---
+import Base from "../../components/Base.astro";
+import { articles, type Article } from "../../data/catalog";
+
+export function getStaticPaths() {
+  return articles.map((article) => ({
+    params: { slug: article.slug },
+    props: { article },
+  }));
+}
+
+interface Props {
+  article: Article;
+}
+
+const { article } = Astro.props;
+---
+
+<Base title={article.title} description={article.dek}>
+  <header class="page-head">
+    <p class="quiet"><a href="/journal">Journal</a> · {article.dateLabel}</p>
+    <h1 class="script">{article.title}</h1>
+    <p class="lede">{article.dek}</p>
+  </header>
+  {
+    article.image ? (
+      <figure class="article-figure frame">
+        <img src={article.image} alt={article.imageAlt ?? ""} />
+      </figure>
+    ) : null
+  }
+  <div class="prose">
+    {article.paragraphs.map((paragraph) => <p>{paragraph}</p>)}
+  </div>
+</Base>

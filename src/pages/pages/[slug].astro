@@ -1,0 +1,57 @@
+---
+import Base from "../../components/Base.astro";
+import { lookbookPlates, utilityPages, type UtilityPage } from "../../data/catalog";
+
+export function getStaticPaths() {
+  return utilityPages
+    .filter((page) => page.slug !== "shops")
+    .map((page) => ({
+      params: { slug: page.slug },
+      props: { page },
+    }));
+}
+
+interface Props {
+  page: UtilityPage;
+}
+
+const { page } = Astro.props;
+---
+
+<Base title={page.title} description={page.paragraphs[0]}>
+  <header class="page-head">
+    <p class="quiet">{page.kicker}</p>
+    <h1 class="script">{page.title}</h1>
+  </header>
+  <div class="prose">
+    {page.paragraphs.map((paragraph) => <p>{paragraph}</p>)}
+    {
+      page.slug === "faq" ? (
+        <p>
+          <a href="/pages/contact">Contact</a> stays off. <a href="/pages/provenance">Provenance</a> lists what was not verified.
+        </p>
+      ) : null
+    }
+    {
+      page.slug === "shops" ? (
+        <p>
+          <a href="/pages/shops/unpublished">Shop detail</a> — not published.
+        </p>
+      ) : null
+    }
+  </div>
+  {
+    page.kind === "lookbook" ? (
+      <div class="look-grid">
+        {lookbookPlates.map((plate) => (
+          <a class="card" href={plate.href}>
+            <span class="frame">
+              <img src={plate.src} alt={plate.alt} />
+            </span>
+            <h2>{plate.caption}</h2>
+          </a>
+        ))}
+      </div>
+    ) : null
+  }
+</Base>

@@ -1,0 +1,43 @@
+---
+import Base from "../../components/Base.astro";
+import { articles } from "../../data/catalog";
+---
+
+<Base title="Journal" description="One preview note. Not a company history.">
+  <header class="page-head">
+    <p class="quiet">Journal</p>
+    <h1 class="script">Journal</h1>
+    <p class="lede">One note is published in this preview. The rest of a journal was not supplied.</p>
+  </header>
+  <div class="explore-grid">
+    {
+      articles.map((article) =>
+        article.image ? (
+          <a class="story" href={`/journal/${article.slug}`}>
+            <img src={article.image} alt={article.imageAlt ?? ""} />
+            <span class="story-label">
+              Read
+              <i class="gem a" />
+              <i class="gem b" />
+              <i class="gem c" />
+              <i class="gem d" />
+            </span>
+          </a>
+        ) : null,
+      )
+    }
+  </div>
+  <div class="prose">
+    {
+      articles.map((article) => (
+        <p>
+          <a href={`/journal/${article.slug}`}>{article.title}</a>
+          <br />
+          <span class="quiet">{article.dateLabel}</span>
+          <br />
+          {article.dek}
+        </p>
+      ))
+    }
+  </div>
+</Base>

@@ -1,0 +1,112 @@
+---
+import { collectionMenu, shopMenu } from "../data/menus";
+---
+
+<a class="skip" href="#content">Skip to content</a>
+<header class="site-header" id="site-header">
+  <div class="bar">
+    <div class="left">
+      <button
+        class="icon-btn mobile-toggle"
+        id="menu-button"
+        type="button"
+        aria-expanded="false"
+        aria-controls="menu-dialog"
+        aria-label="Open menu"
+      >
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M4 8h16M4 16h16"></path>
+        </svg>
+      </button>
+      <a class="icon-btn mobile-toggle" href="/pages/account" aria-label="Account, off">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="3"></circle><path d="M6 19c1.5-3 10.5-3 12 0"></path></svg>
+      </a>
+      <nav class="desktop-nav" aria-label="Primary">
+        <a class="nav-btn" href="/collections/new-arrivals">New</a>
+        <div class="nav-item" id="shop-wrap">
+          <button
+            class="nav-btn"
+            id="shop-button"
+            type="button"
+            aria-expanded="false"
+            aria-controls="mega-shop"
+          >
+            Shop
+          </button>
+          <div class="mega" id="mega-shop">
+            <div>
+              <h2>{shopMenu[0].title}</h2>
+              {shopMenu[0].links.map((link) => (
+                <a href={link.href}>{link.label}</a>
+              ))}
+            </div>
+            <div class="mega-stack">
+              <div>
+                <h2>{shopMenu[1].title}</h2>
+                {shopMenu[1].links.map((link) => (
+                  <a href={link.href}>{link.label}</a>
+                ))}
+              </div>
+              <div>
+                <h2>{shopMenu[2].title}</h2>
+                {shopMenu[2].links.map((link) => (
+                  <a href={link.href}>{link.label}</a>
+                ))}
+              </div>
+            </div>
+            <div>
+              <h2>{shopMenu[3].title}</h2>
+              {shopMenu[3].links.map((link) => (
+                <a href={link.href}>{link.label}</a>
+              ))}
+            </div>
+            <a class="mega-photo" href="/#hero" tabindex="-1">
+              <img src="/campaign/HP-NAVIGATION_HOLIDAY_1_2026_V1.jpg" alt="" />
+            </a>
+          </div>
+        </div>
+        <div class="nav-item" id="collections-wrap">
+          <button class="nav-btn" id="collections-button" type="button" aria-expanded="false" aria-controls="mega-collections">
+            Collections
+          </button>
+          <div class="mega" id="mega-collections">
+            {
+              collectionMenu.map((column) => (
+                <div>
+                  <h2>{column.title}</h2>
+                  {column.links.map((link) => (
+                    <a href={link.href}>{link.label}</a>
+                  ))}
+                </div>
+              ))
+            }
+            <a class="mega-photo" href="/#hero" tabindex="-1">
+              <img src="/campaign/HP-NAVIGATION_HOLIDAY_1_2026_V2.jpg" alt="" />
+            </a>
+          </div>
+        </div>
+        <a class="nav-btn" href="/journal" title="Discover menu contents were not captured">Discover</a>
+      </nav>
+    </div>
+    <a class="wordmark" href="/">Prism &amp; Pollen</a>
+    <div class="right">
+      <a class="util-link" href="/pages/account">Account</a>
+      <a class="currency-link" href="/pages/currency">USD</a>
+      <button class="icon-btn" id="search-open" type="button" aria-label="Search" aria-controls="search-dialog" aria-expanded="false">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <circle cx="11" cy="11" r="6"></circle>
+          <path d="M16 16.5 20 21"></path>
+        </svg>
+      </button>
+      <a class="util-link" href="/pages/assistance">Assistance</a>
+      <button class="icon-btn" id="bag-button" type="button" aria-controls="cart-dialog" aria-expanded="false">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M6 8h12l-1 12H7L6 8Z"></path>
+          <path d="M9 8V7a3 3 0 0 1 6 0v1"></path>
+        </svg>
+        <span class="bag-count" id="bag-count">0</span>
+        <span class="sr-only" id="bag-label">Bag, 0 items</span>
+      </button>
+    </div>
+  </div>
+</header>
