@@ -1,0 +1,12 @@
+---
+description: Tara bridal-creator preview conventions.
+alwaysApply: true
+---
+
+# Tara bridal creator
+
+- The site is Tara's draft bridal-creator preview. Known facts are in `docs/PROVENANCE.md`; do not add others.
+- Images are AI-generated illustrations. Do not present them as photographs of Tara.
+- No music content, shop, cart, checkout, accounts, database, payments, paid APIs or secrets.
+- Keep `noindex`, `robots.txt` and the hosting `X-Robots-Tag` headers. Keep `firebase.json` free of site and project names.
+- Data lives in `src/data/`. Shared pure logic lives in `src/lib/`.

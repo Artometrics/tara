@@ -1,28 +1,53 @@
-# Prism & Pollen
+# Tara: bridal creator site (draft preview)
 
-Static Astro preview of a paper-ground clothing edit. Representative pages only — not a full catalog clone. Payments, accounts, email, SMS, reviews, gift-card issuance, inventory, and fulfillment are off. The bag stays in this browser.
+A static Astro site for Tara, an emerging bridal creator planning celebrations in India, Italy and America. Draft preview: not indexed, nothing for sale, no accounts, database, payments, paid APIs or secrets.
 
-The twelve products are the supplied reference catalog. Rights are not cleared and stock is unknown. See `docs/PROVENANCE.md` and `docs/FIDELITY.md`. Pages send `noindex` and `robots.txt` disallows crawlers. The campaign homepage and motion are waiting on new captures.
+## Pages
 
-## Commands
+| Route | What it is |
+| --- | --- |
+| `/` | Home: hero, intro, lookbook and journal teasers, the three weddings, wedding fund note |
+| `/about` | About Tara: known facts, what is still blank, what this preview is |
+| `/weddings` | The Three Weddings: India, Italy, America, with a comparison table |
+| `/lookbook` | Look grid with filter and sort, filter state kept in the URL |
+| `/lookbook/<look>` | Eight look detail pages: inspiration, details, questions |
+| `/journal` | Six starter post drafts |
+| `/journal/<post>` | Post pages |
+| `/partner` | Draft media kit, audience pillars, example packages (not offers), pitch template |
+| `/newsletter` | Front-end draft signup (localStorage, optional mailto) |
+| `/404` | Not found |
+
+## Run it
+
+Requires Node.js 22 or newer (`.nvmrc`).
 
 | Command | Action |
 | :------ | :----- |
-| `npm install` | Install dependencies |
-| `npm run dev` | Local preview |
+| `npm ci` | Install dependencies |
+| `npm run dev` | Local dev server at `localhost:4321` |
 | `npm run build` | Static site in `dist/` |
+| `npm run preview` | Serve `dist/` |
 | `npm run typecheck` | `astro check` |
-| `npm test` | Unit tests |
-| `npm run test:links` | Internal link check (after build) |
-| `npm run test:browser` | Browser QA at 320, 390, and desktop |
-| `npm run check` | All of the above |
+| `npm test` | Unit tests (Vitest) |
+| `npm run test:links` | Check links, images, srcset and anchors in `dist/` (after build) |
+| `npm run test:browser` | Browser QA on every page at 320, 390 and 1440 px, plus interactions (after build; needs Chrome or Chromium) |
+| `npm run screenshots` | Rewrites `docs/screenshots/` at 1440x900 and 390x844 (after build) |
+| `npm run images` | Re-optimize bridal images from `assets/source-images/` |
+| `npm run check` | Typecheck, tests, build, link check, browser QA |
 
-Node.js 22 or newer (`.nvmrc`).
+## Where things live
 
-## Routes
-
-Home, collection, product, gift note, search, bag, journal, lookbook, and placeholder pages for questions, policies, about, impact, contact, account, and shops. Unknown URLs use the 404 page.
+- Copy and data: `src/data/` (`site.ts` for celebrations and menus, `looks.ts`, `journal.ts`, `partner.ts`, `images.ts`).
+- Pure logic with tests: `src/lib/lookbook.ts`, `src/lib/newsletter.ts`.
+- Components: `src/components/`. Client script: `src/scripts/site.ts`. Styles: `src/styles/global.css`.
+- Docs: `docs/PLAYBOOK.md` (growth playbook), `docs/ART-DIRECTION.md`, `docs/IMAGE-SLOTS.md`, `docs/PROVENANCE.md`, `docs/screenshots/`.
 
 ## Hosting config
 
-`netlify.toml`, `firebase.json`, and `public/_headers` are deploy-ready for **this** project only. They set `X-Robots-Tag: noindex`. This build does not deploy anywhere and does not touch another site.
+Static hosting of `dist/` only. Nothing here deploys anywhere.
+
+- `firebase.json`: serves `dist/` with `X-Robots-Tag: noindex` and security headers. No site or project name is hardcoded and there is no `.firebaserc`. To use it, run `firebase use --add` against a project you own, then `firebase deploy --only hosting`.
+- `netlify.toml`: `npm run build`, publish `dist`, Node 22, same headers.
+- `public/_headers`: the same headers for hosts that read it.
+
+Before a real launch, remove `noindex`, `robots.txt` disallow and the `X-Robots-Tag` headers together, replace placeholder handles and the contact address, and replace the AI-generated images or keep labeling them.
