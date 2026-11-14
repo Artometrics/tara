@@ -1,5 +1,6 @@
 {
   "hosting": {
+    "site": "tara-bridal-510519",
     "public": "dist",
     "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
     "headers": [
